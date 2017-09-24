@@ -29,8 +29,13 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{ config('app.name', 'CondControl') }}
                     </a>
+                    @permission('admin-area')
+                    <a class="nav navbar-brand">
+                        Painel de Administrador
+                    </a>
+                    @endpermission
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
