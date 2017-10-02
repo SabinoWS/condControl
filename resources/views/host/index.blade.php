@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Painel de Administrador</div>
+                <div class="panel-heading">Painel do Proprietário</div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -17,24 +17,23 @@
                     <div class="row">
                         <div class="col-md-12 text-center">
                             <div class="btn btn-default">
-                                Administrar Condomínios
+                                Notícias
+                            </div>
+                            <div class="btn btn-default">
+                                Fotos
                             </div>
                         </div>
                     </div>
+                    <br />
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <a href="{{ route('create-manager') }}" class="btn btn-default">
-                                Cadastrar Síndico
-                            </a>
+                            <div class="btn btn-default">
+                                Reservar Local
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <a href="{{ route('register') }}" class="btn btn-default">
-                                Cadastrar Usuário
-                            </a>
-                        </div>
-                    </div>
+
+
                 </div>
             </div>
         </div>

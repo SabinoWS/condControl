@@ -23,7 +23,7 @@ class CreateAdminManagerResidentRoles extends Migration
 
         // Terá permissões do condomínio e criação de usuários abaixo
         $propertyManagerRole = new Role();
-        $propertyManagerRole->name         = 'propertyManager';
+        $propertyManagerRole->name         = 'manager';
         $propertyManagerRole->display_name = 'Property Manager';
         $propertyManagerRole->description  = 'Síndico do condomínio';
         $propertyManagerRole->save();
@@ -51,7 +51,7 @@ class CreateAdminManagerResidentRoles extends Migration
     public function down()
     {
         $role = Role::whereName('admin')->first()->delete();
-        $role = Role::whereName('propertyManager')->first()->delete();
+        $role = Role::whereName('manager')->first()->delete();
         $role = Role::whereName('holder')->first()->delete();
         $role = Role::whereName('resident')->first()->delete();
     }

@@ -23,9 +23,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if(auth()->user()->can('admin-area'))
+        $user = auth()->user();
+        if($user->hasRole('admin'))
             return view('administrator.index');
-        else
+        if($user->hasRole('manager'))
+            return view('manager.index');
+        if($user->hasRole('host'))
+            return view('host.index');
+        if($user->hasRole('resident'))
             return view('resident.index');
     }
 }

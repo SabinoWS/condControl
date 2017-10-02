@@ -19,18 +19,27 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::prefix('admin')->group(function () {
+Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
     Route::get('painel', 'AdministratorController@index')->name('admin-panel');
+    Route::prefix('criar')->group(function () {
+        Route::get('manager', 'ManagerController@create')->name('create-manager');
+        Route::get('host', 'HostController@create')->name('create-host');
+        Route::get('resident', 'ResidentController@create')->name('create-resident');
+
+        Route::post('manager', 'ManagerController@save')->name('save-manager');
+        Route::post('host', 'HostController@save')->name('save-host');
+        Route::post('resident', 'ResidentController@save')->name('save-resident');
+    });
 });
 
-Route::prefix('manager')->group(function () {
-    Route::get('painel', 'ManagerController@index')->name('admin-panel');
+Route::group(['prefix' => 'sindico', 'middleware' => ['role:manager']], function() {
+    Route::get('painel', 'ManagerController@index')->name('manager-panel');
 });
 
-Route::prefix('host')->group(function () {
-    Route::get('painel', 'HostController@index')->name('admin-panel');
+Route::group(['prefix' => 'proprietario', 'middleware' => ['role:host']], function() {
+    Route::get('painel', 'HostController@index')->name('host-panel');
 });
 
-Route::prefix('resident')->group(function () {
-    Route::get('painel', 'ResidentController@index')->name('admin-panel');
+Route::group(['prefix' => 'proprietario', 'middleware' => ['role:resident']], function() {
+    Route::get('painel', 'ResidentController@index')->name('resident-panel');
 });
