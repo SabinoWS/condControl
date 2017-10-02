@@ -20,5 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::prefix('admin')->group(function () {
-    Route::get('painel', )->name('admin-panel');
+    // Route::get('painel', )->name('admin-panel');
 });
