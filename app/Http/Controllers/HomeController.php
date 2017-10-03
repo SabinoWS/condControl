@@ -25,12 +25,12 @@ class HomeController extends Controller
     {
         $user = auth()->user();
         if($user->hasRole('admin'))
-            return view('administrator.index');
+            return view('administrator.panel');
         if($user->hasRole('manager'))
-            return view('manager.index');
+            return view('manager.panel');
         if($user->hasRole('host'))
-            return view('host.index');
+            return view('host.panel');
         if($user->hasRole('resident'))
-            return view('resident.index');
+            return view('resident.panel');
     }
 }

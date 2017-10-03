@@ -28,4 +28,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function condominium(){
+        return $this->belongsTo('App\Condominium');
+    }
+
+    public function getCondominium(){
+        return $this->condominium;
+    }
 }

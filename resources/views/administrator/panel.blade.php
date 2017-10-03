@@ -16,9 +16,9 @@
 
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <div class="btn btn-default">
+                            <a href="{{ route('management-condominium') }}" class="btn btn-default">
                                 Administrar Condomínios
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="row">
