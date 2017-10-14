@@ -69,7 +69,7 @@ http://www.templatemo.com/tm-406-flex
                                 <div class="overlay"></div>
                                 <img src="{{ asset('home/images/condominio.jpg') }}" alt="">
                                 <div class="slider-caption visible-md visible-lg">
-                                    <h2>Facilidade de Gerenciamento</h2>
+                                    <h2>Facilidade em Gerenciamento</h2>
                                     <p>Agilize sua vida</p>
                                     @if (Route::has('login'))
                                         <div class="top-right links">
