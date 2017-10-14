@@ -1,12 +1,13 @@
 <?php
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return view('home.index');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/painel', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'administrador', 'middleware' => ['role:admin']], function() {
     Route::get('painel', 'AdministratorController@index')->name('admin-panel');

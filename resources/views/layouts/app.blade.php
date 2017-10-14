@@ -12,6 +12,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/condControl.css') }}" rel="stylesheet">
+    <link href="{{ asset('fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
@@ -31,11 +34,6 @@
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'CondControl') }}
                     </a>
-                    @permission('admin-area')
-                    <a class="nav navbar-brand">
-                        Painel de Administrador
-                    </a>
-                    @endpermission
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
