@@ -188,6 +188,13 @@ http://www.templatemo.com/tm-406-flex
                         <p>Bla bla bla</p>
                     </div> <!-- /.heading-section -->
                 </div>
+                <div class="row">
+                    <div class="col-md-12">
+                       <div class="googlemap-wrapper">
+                            <div id="map_canvas" class="map-canvas"></div>
+                        </div> <!-- /.googlemap-wrapper -->
+                    </div> <!-- /.col-md-12 -->
+                </div> <!-- /.row -->
             </div> <!-- /.container -->
         </div> <!-- /#our-team -->
 
@@ -236,14 +243,6 @@ http://www.templatemo.com/tm-406-flex
                     </div> <!-- /.col-md-5 -->
                 </div> <!-- /.row -->
 
-                <div class="row">
-                    <div class="col-md-12">
-                       <div class="googlemap-wrapper">
-                            <div id="map_canvas" class="map-canvas"></div>
-                        </div> <!-- /.googlemap-wrapper -->
-                    </div> <!-- /.col-md-12 -->
-                </div> <!-- /.row -->
-                
             </div> <!-- /.container -->
         </div> <!-- /#contact -->
 
