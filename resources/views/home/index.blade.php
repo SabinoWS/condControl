@@ -193,19 +193,14 @@ http://www.templatemo.com/tm-406-flex
 
         <div class="content-section" id="contact">
             <div class="container">
+
                 <div class="row">
                     <div class="heading-section col-md-12 text-center">
                         <h2>Contato</h2>
                         <p>Faça um orçamento</p>
                     </div> <!-- /.heading-section -->
                 </div> <!-- /.row -->
-                <div class="row">
-                    <div class="col-md-12">
-                       <div class="googlemap-wrapper">
-                            <div id="map_canvas" class="map-canvas"></div>
-                        </div> <!-- /.googlemap-wrapper -->
-                    </div> <!-- /.col-md-12 -->
-                </div> <!-- /.row -->
+
                 <div class="row">
                     <div class="col-md-7 col-sm-6">
                         <p>
@@ -240,6 +235,15 @@ http://www.templatemo.com/tm-406-flex
                         </div> <!-- /.contact-form -->
                     </div> <!-- /.col-md-5 -->
                 </div> <!-- /.row -->
+
+                <div class="row">
+                    <div class="col-md-12">
+                       <div class="googlemap-wrapper">
+                            <div id="map_canvas" class="map-canvas"></div>
+                        </div> <!-- /.googlemap-wrapper -->
+                    </div> <!-- /.col-md-12 -->
+                </div> <!-- /.row -->
+                
             </div> <!-- /.container -->
         </div> <!-- /#contact -->
 
