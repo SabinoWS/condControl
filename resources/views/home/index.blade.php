@@ -32,7 +32,27 @@ http://www.templatemo.com/tm-406-flex
                     <div class="row">
                         <div class="col-md-12 text-center">
                             <ul class="social-icons">
-                                <li><a href="{{ url('/painel') }}" class="fa fa-sign-in"></a></li>
+
+                                @if (Route::has('login'))
+                                    <div class="top-right links">
+                                        @auth
+                                            <li><a title="Sair" href="{{ route('logout') }}" class="fa fa-sign-out"
+                                                onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"
+                                                class="fa fa-sign-in">
+                                                </a>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    {{ csrf_field() }}
+                                                </form>
+                                            </a></li>
+                                        @else
+                                            <li>
+                                                <a title="Entrar" href="{{ route('login') }}" class="fa fa-sign-in"></a>
+                                            </li>
+                                        @endauth
+                                    </div>
+                                @endif
+
                             </ul>
                         </div> <!-- /.col-md-12 -->
                     </div> <!-- /.row -->
