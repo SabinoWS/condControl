@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Infrastructure;
-
-use Illuminate\Database\Eloquent\Model;
+namespace App\Infrastructure\Eloquent;
 use App\User;
+use Illuminate\Database\Eloquent\Model;
+
 
 class Condominium extends Model
 {
@@ -18,10 +18,10 @@ class Condominium extends Model
     ];
 
     public function manager(){
-        return $this->hasOne(Class::User, 'id', 'manager_id');
+        return $this->hasOne(User::Class, 'id', 'manager_id');
     }
 
-    public function gerManager(){
+    public function getManager(){
         return $this->manager;
     }
 

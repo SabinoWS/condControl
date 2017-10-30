@@ -81,7 +81,7 @@ http://www.templatemo.com/tm-406-flex
                 </div> <!-- /.main-header -->
             </div> <!-- /.site-header -->
 
-            <div class="site-slider">
+            <div class="site-slider visible-md visible-lg">
                 <div class="slider">
                     <div class="flexslider">
                         <ul class="slides">
@@ -106,8 +106,29 @@ http://www.templatemo.com/tm-406-flex
                     </div> <!-- /.flexslider -->
                 </div> <!-- /.slider -->
             </div> <!-- /.site-slider -->
+
         </div> <!-- /.site-main -->
 
+        <div class="content-section visible-sm visible-xs" id="enter_btn">
+            <img src="{{ asset('home/images/condominio.jpg') }}" alt="">
+            <div class="container">
+                <div class="row">
+                    <div class="heading-section text-center">
+                        <h2>Gerenciamento</h2>
+                        <p>Agilize sua vida</p>
+                        @if (Route::has('login'))
+                            <div class="top-right links">
+                                @auth
+                                    <a href="{{ url('/painel') }}" class="enter-btn">Painel</a>
+                                @else
+                                    <a href="{{ route('login') }}" class="enter-btn">Entrar</a>
+                                @endauth
+                            </div>
+                        @endif
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="content-section" id="services">
             <div class="container">
@@ -266,7 +287,7 @@ http://www.templatemo.com/tm-406-flex
         <script src="{{ asset('home/js/main.js') }}"></script>
 
         <!-- Google Map -->
-        <script src="{{ asset('http://maps.google.com/maps/api/js?sensor=true') }}"></script>
+        <script src="{{ asset('http://maps.google.com/maps/api/js?key=AIzaSyABGCGKREpkwYxfbk8x-Ik1oOmmmxOJsGE') }}"></script>
         <script src="{{ asset('home/js/vendor/jquery.gmap3.min.js') }}"></script>
 
         <!-- Google Map Init-->

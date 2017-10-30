@@ -18,27 +18,26 @@
                     <table class="default-table table table-bordered">
                         <thead>
                             <tr>
-                                <th>Nome</th>
-                                <th>Síndico</th>
-                                <th>Ações</th>
+                                <th class="text-center">Nome</th>
+                                <th class="text-center">Síndico</th>
+                                <th class="col-xs-2 text-center">Ações</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Condomínio 01</td>
-                                <td>Síndico Teste</td>
-                                <td>E D AS</td>
-                            </tr>
-                            <tr>
-                                <td>Condomínio 02</td>
-                                <td>Síndico Teste</td>
-                                <td>E D AS</td>
-                            </tr>
-                            <tr>
-                                <td>Condomínio 02</td>
-                                <td>Síndico Teste</td>
-                                <td>E D AS</td>
-                            </tr>
+
+                            @forelse ($condominiums as $condominium)
+                                <tr>
+                                    <td class="text-center">{{ $condominium->name }}</td>
+                                    <td class="text-center">{{ $condominium->getManager()->name }}</td>
+                                    <td class="col-xs-2 text-center">
+                                        <a><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <a><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                        <a><i class="fa fa-id-card" aria-hidden="true"></i></a>
+                                    </td>
+                                </tr>
+                            @empty
+                                Nenhum cadastrado
+                            @endforelse
                         </tbody>
                     </table>
 

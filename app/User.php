@@ -29,11 +29,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function condominium(){
-        return $this->belongsTo('App\Condominium');
-    }
-
-    public function getCondominium(){
-        return $this->condominium;
-    }
+    // public function condominium(){
+    //     return $this->belongsTo('App\Infrastructure\Eloquent\Condominium');
+    // }
+    //
+    // public function getCondominium(){
+    //     return $this->condominium;
+    // }
 }
