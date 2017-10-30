@@ -8,15 +8,20 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+
+
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/condControl.css') }}" rel="stylesheet">
+    <link href="{{ asset('js/data_table/dtcss.css') }}" rel="stylesheet">
     <link href="{{ asset('fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet">
 
 </head>
 <body>
+    <!-- Scripts -->
+    {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
@@ -75,7 +80,6 @@
         @yield('content')
     </div>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+
 </body>
 </html>

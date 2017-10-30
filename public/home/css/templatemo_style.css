@@ -800,6 +800,42 @@ a.enter-btn {
   margin-top: 130px;
 }
 
+#enter_btn {
+  position: relative;
+}
+
+.black-background {
+  position: relative;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+}
+
+#enter_btn {
+    background-image: url("../images/condominio.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+#enter_btn h2 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 700;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+#enter_btn p {
+  color: white;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 26px;
+  display: block;
+}
+
 /*
 body, p, div, h1, h2, h3, h4, h5, h6 {
 	font-family: "Open Sans", Arial, Verdana, Geneva, sans-serif;

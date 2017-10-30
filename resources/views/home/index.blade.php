@@ -110,10 +110,11 @@ http://www.templatemo.com/tm-406-flex
         </div> <!-- /.site-main -->
 
         <div class="content-section visible-sm visible-xs" id="enter_btn">
-            <img src="{{ asset('home/images/condominio.jpg') }}" alt="">
             <div class="container">
                 <div class="row">
-                    <div class="heading-section text-center">
+                    {{-- <span class="black-background"></span> --}}
+                    <div class="z10 heading-section text-center">
+
                         <h2>Gerenciamento</h2>
                         <p>Agilize sua vida</p>
                         @if (Route::has('login'))
