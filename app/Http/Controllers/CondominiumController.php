@@ -26,7 +26,7 @@ class CondominiumController extends Controller
 
     public function save(CreateCondominiumRequest $request){
         $this->condominiumRepository->createNewCondominium($request->all());
-        return view('condominium.management');
+        return redirect()->route('management-condominium');
     }
 
 }

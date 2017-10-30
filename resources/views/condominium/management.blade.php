@@ -24,7 +24,6 @@
                             </tr>
                         </thead>
                         <tbody>
-
                             @forelse ($condominiums as $condominium)
                                 <tr>
                                     <td class="text-center">{{ $condominium->name }}</td>
@@ -36,7 +35,7 @@
                                     </td>
                                 </tr>
                             @empty
-                                <span id="no_result">Nenhum condomínio cadastrado</span>
+
                             @endforelse
                         </tbody>
                     </table>
