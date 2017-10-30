@@ -20,6 +20,7 @@
 
 </head>
 <body>
+
     <!-- Scripts -->
     {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
     <div id="app">
@@ -76,7 +77,7 @@
                 </div>
             </div>
         </nav>
-
+        
         @yield('content')
     </div>
 
