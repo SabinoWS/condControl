@@ -162,7 +162,7 @@ http://www.templatemo.com/tm-406-flex
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
                                 <div class="inner-service">
-                                   <h3>Construindo</h3>
+                                   <h3>Construindo2</h3>
                                    <p>Construindo.</p>
                                 </div>
                             </div> <!-- /.service-content -->
@@ -240,6 +240,7 @@ http://www.templatemo.com/tm-406-flex
                         <ul class="contact-info">
                             <li>Telefone: </li>
                             <li>Email: <a href="mailto:sabino.th@hotmail.com">sabino.th@hotmail.com</a></li>
+                            <li>Email: <a href="mailto:tiago.rs@hotmail.com">tiago.rs@hotmail.com</a></li>
                             <li>Endereço: Av. Sertório</li>
                         </ul>
                         <!-- spacing for mobile viewing --><br><br>
