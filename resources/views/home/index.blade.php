@@ -148,7 +148,7 @@ http://www.templatemo.com/tm-406-flex
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
                                 <div class="inner-service">
-                                   <h3>Construindo</h3>
+                                   <h3>Condominios Residencial</h3>
                                    <p>Construindo.</p>
                                 </div>
                             </div> <!-- /.service-content -->
@@ -162,7 +162,7 @@ http://www.templatemo.com/tm-406-flex
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
                                 <div class="inner-service">
-                                   <h3>Construindo</h3>
+                                   <h3>Condominios Comerciais</h3>
                                    <p>Construindo.</p>
                                 </div>
                             </div> <!-- /.service-content -->
@@ -176,7 +176,7 @@ http://www.templatemo.com/tm-406-flex
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
                                 <div class="inner-service">
-                                   <h3>Construindo</h3>
+                                   <h3>Imobiliarias</h3>
                                    <p>Construindo.</p>
                                 </div>
                             </div> <!-- /.service-content -->
@@ -190,7 +190,7 @@ http://www.templatemo.com/tm-406-flex
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
                                 <div class="inner-service">
-                                   <h3>Construindo</h3>
+                                   <h3>Empresas do ramo Imobiliario</h3>
                                    <p>Construindo.</p>
                                 </div>
                             </div> <!-- /.service-content -->
@@ -208,7 +208,7 @@ http://www.templatemo.com/tm-406-flex
                     <div class="heading-section col-md-12 text-center">
                         <h2>Quem somos</h2>
                         <p>Somos uma empresa de tecnologia que desenvolve sistems inteligentes para agilizar o gerencianto
-                        para empresas,condominios residenciais, condominios comerciais e empresas do ramo imobiliario
+                        para empresas, condominios residenciais, condominios comerciais e empresas do ramo imobiliario
                         como imobiliarias.</p>
                     </div> <!-- /.heading-section -->
                 </div>
