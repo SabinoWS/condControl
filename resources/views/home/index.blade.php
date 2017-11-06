@@ -207,8 +207,8 @@ http://www.templatemo.com/tm-406-flex
                 <div class="row">
                     <div class="heading-section col-md-12 text-center">
                         <h2>Quem somos</h2>
-                        <p>Somos uma empresa de tecnologia que desenvolve sistems inteligentes para agilizar o gerencianto<B>
-                        para empresas,condominios residenciais, condominios comerciais e empresas do ramo imobiliario<b>
+                        <p>Somos uma empresa de tecnologia que desenvolve sistems inteligentes para agilizar o gerencianto
+                        para empresas,condominios residenciais, condominios comerciais e empresas do ramo imobiliario
                         como imobiliarias.</p>
                     </div> <!-- /.heading-section -->
                 </div>
