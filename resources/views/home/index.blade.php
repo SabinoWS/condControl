@@ -148,7 +148,7 @@ http://www.templatemo.com/tm-406-flex
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
                                 <div class="inner-service">
-                                   <h3>Condominios Residencial</h3>
+                                   <h3>Condomínios Residencial</h3>
                                    <p>Construindo.</p>
                                 </div>
                             </div> <!-- /.service-content -->
@@ -162,7 +162,7 @@ http://www.templatemo.com/tm-406-flex
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
                                 <div class="inner-service">
-                                   <h3>Condominios Comerciais</h3>
+                                   <h3>Condomínios Comerciais</h3>
                                    <p>Construindo.</p>
                                 </div>
                             </div> <!-- /.service-content -->
@@ -176,7 +176,7 @@ http://www.templatemo.com/tm-406-flex
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
                                 <div class="inner-service">
-                                   <h3>Imobiliarias</h3>
+                                   <h3>Imobiliárias</h3>
                                    <p>Construindo.</p>
                                 </div>
                             </div> <!-- /.service-content -->
@@ -190,7 +190,7 @@ http://www.templatemo.com/tm-406-flex
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
                                 <div class="inner-service">
-                                   <h3>Empresas do ramo Imobiliario</h3>
+                                   <h3>Empresas do ramo imobiliário</h3>
                                    <p>Construindo.</p>
                                 </div>
                             </div> <!-- /.service-content -->
