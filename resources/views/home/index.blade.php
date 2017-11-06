@@ -238,7 +238,7 @@ http://www.templatemo.com/tm-406-flex
                             Construindo...
                     	</p>
                         <ul class="contact-info">
-                            <li>Telefone: </li>
+                            <li>Telefone:(51) 3251-1111 </li>
                             <li>Email: <a href="mailto:sabino.th@hotmail.com">sabino.th@hotmail.com</a></li>
                             <li>Email: <a href="mailto:tiago.rs@hotmail.com">tiago.rs@hotmail.com</a></li>
                             <li>Endereço: Av. Sertório</li>
