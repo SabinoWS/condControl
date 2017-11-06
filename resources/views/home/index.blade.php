@@ -243,7 +243,7 @@ http://www.templatemo.com/tm-406-flex
                             <li>Telefone:(51) 3251-1111 </li>
                             <li>Email: <a href="mailto:sabino.th@hotmail.com">sabino.th@hotmail.com</a></li>
                             <li>Email: <a href="mailto:tiago.rs@hotmail.com">tiago.rs@hotmail.com</a></li>
-                            <li>Endereço: Av. Sertório</li>
+                            <li>Endereço: Av. Sertório, 5310 - Porto Alegre - RS</li>
                         </ul>
                         <!-- spacing for mobile viewing --><br><br>
                     </div> <!-- /.col-md-7 -->
