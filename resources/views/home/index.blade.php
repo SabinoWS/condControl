@@ -158,7 +158,7 @@ http://www.templatemo.com/tm-406-flex
                         <div class="service-item" id="service-2">
                             <div class="service-icon">
                                 <i class="fa fa-paper-plane-o"></i>
-                                 Timeline
+                                 Notícias
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
                                 <div class="inner-service">
