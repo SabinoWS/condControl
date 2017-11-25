@@ -172,7 +172,7 @@ http://www.templatemo.com/tm-406-flex
                         <div class="service-item" id="service-3">
                             <div class="service-icon">
                                 <i class="fa fa-institution"></i>
-                                Construindo
+                                Agendamento
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
                                 <div class="inner-service">
@@ -186,7 +186,7 @@ http://www.templatemo.com/tm-406-flex
                         <div class="service-item" id="service-4">
                             <div class="service-icon">
                                 <i class="fa fa-flask"></i>
-                                Construindo
+                                Votação On-Line
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
                                 <div class="inner-service">
