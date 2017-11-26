@@ -5,6 +5,8 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
+use App\Infrastructure\Eloquent\Condominium;
+use App\Models\Role;
 
 class User extends Authenticatable
 {
@@ -29,11 +31,27 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    // public function condominium(){
-    //     return $this->belongsTo('App\Infrastructure\Eloquent\Condominium');
-    // }
-    //
-    // public function getCondominium(){
-    //     return $this->condominium;
-    // }
+    public function getId(){
+        return $this->id;
+    }
+
+    public function getName(){
+        return $this->name;
+    }
+
+    public function getEmail(){
+        return $this->email;
+    }
+
+    public function roles(){
+        return $this->belongsToMany(Role::Class, 'role_user', 'user_id', 'role_id');
+    }
+
+    public function condominium(){
+        return $this->hasOne(Condominium::Class, 'id', 'condominium_id');
+    }
+
+    public function getCondominium(){
+        return $this->condominium;
+    }
 }

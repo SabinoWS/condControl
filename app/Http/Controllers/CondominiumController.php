@@ -29,4 +29,20 @@ class CondominiumController extends Controller
         return redirect()->route('management-condominium');
     }
 
+    public function edit($id){
+        $condominium = $this->condominiumRepository->find($id);
+        return view('condominium.edit')->with('condominium', $condominium);
+    }
+
+    public function update(CreateCondominiumRequest $request){
+        $this->condominiumRepository->editCondominium($request->all());
+        return redirect()->route('management-condominium');
+    }
+
+    public function delete(Request $request){
+        $condominium = $this->condominiumRepository->find($request->id);
+        $condominium->delete();
+        return redirect()->route('management-condominium');
+    }
+
 }

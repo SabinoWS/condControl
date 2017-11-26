@@ -14,8 +14,9 @@ class ResidentController extends Controller
         $this->userRepository = $userRepository;
     }
 
-    public function index(){
-
+    public function management(){
+        $residents = $this->residentRepository->all();
+        return view('resident.management')->with('residents', $residents);
     }
 
     public function create(){

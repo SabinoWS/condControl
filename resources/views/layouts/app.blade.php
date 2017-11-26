@@ -7,9 +7,6 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-
-
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
@@ -22,6 +19,9 @@
 <body>
 
     <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
     {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
@@ -37,7 +37,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/painel') }}">
                         {{ config('app.name', 'CondControl') }}
                     </a>
                 </div>
@@ -77,10 +77,9 @@
                 </div>
             </div>
         </nav>
-        
         @yield('content')
     </div>
 
-
+    @stack('scripts')
 </body>
 </html>

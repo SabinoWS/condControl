@@ -6,31 +6,31 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="main-panel panel panel-default">
                 <div class="panel-heading">
-                    <span>Gestão de Condomínios</span>
+                    <span>Gestão de Proprietários</span>
                 </div>
 
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <a href="{{ route('create-condominium') }}" class="round-icon-button fa fa-plus btn btn-default"></a>
+                            <a href="{{ route('create-holder') }}" class="round-icon-button fa fa-plus btn btn-default"></a>
                         </div>
                     </div>
                     <table class="default-table table table-bordered" id="tabela">
                         <thead>
                             <tr>
                                 <th class="text-center">Nome</th>
-                                <th class="text-center">Síndico</th>
+                                <th class="text-center">Condomínio</th>
                                 <th class="col-xs-2 text-center">Ações</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse ($condominiums as $condominium)
+                            @forelse ($holders as $holder)
                                 <tr>
-                                    <td class="text-center">{{ $condominium->getName() }}</td>
-                                    <td class="text-center">{{ $condominium->getManager()->name }}</td>
+                                    <td class="text-center">{{ $holder->getName() }}</td>
+                                    <td class="text-center">{{ $holder->getCondominium()->getName() }}</td>
                                     <td class="col-xs-2 text-center">
-                                        <a href="{{ route('edit-condominium',  $condominium->getId()) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        <form class="form-horizontal" method="POST" action="{{ route('delete-condominium', ['id' => $condominium->getId()]) }}">
+                                        <a href="{{ route('edit-holder',  $holder->getId()) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <form class="form-horizontal" method="POST" action="{{ route('delete-holder', ['id' => $holder->getId()]) }}">
                                             {{ csrf_field() }}
                                             <button type="submit"><i class="fa fa-trash"></i></button>
                                         </form>
