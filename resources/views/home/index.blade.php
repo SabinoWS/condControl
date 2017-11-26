@@ -61,7 +61,7 @@ http://www.templatemo.com/tm-406-flex
                     <div class="container">
                         <div id="menu-wrapper">
                             <div class="row">
-                                
+                                <div class="logo-wrapper col-md-2 col-sm-2">
                                     <h1>
                                         <a href="#">CondControl</a>
                                     </h1>
