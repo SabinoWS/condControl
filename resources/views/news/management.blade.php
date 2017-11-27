@@ -6,31 +6,35 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="main-panel panel panel-default">
                 <div class="panel-heading">
-                    <span>Gestão de Moradores</span>
+                    <span>Gestão de Notícias</span>
                 </div>
 
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <a href="{{ route('create-resident') }}" class="round-icon-button fa fa-plus btn btn-default"></a>
+                            <a href="{{ route('create-news') }}" class="round-icon-button fa fa-plus btn btn-default"></a>
                         </div>
                     </div>
                     <table class="default-table table table-bordered" id="tabela">
                         <thead>
                             <tr>
-                                <th class="text-center">Nome</th>
-                                <th class="text-center">Condomínio</th>
+                                <th class="text-center">Título</th>
+                                <th class="text-center">Autor</th>
+                                <th class="text-center">Data</th>
+                                <th class="text-center">Tipo</th>
                                 <th class="col-xs-2 text-center">Ações</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse ($residents as $resident)
+                            @forelse ($news as $new)
                                 <tr>
-                                    <td class="text-center">{{ $resident->getName() }}</td>
-                                    <td class="text-center">{{ $resident->getCondominium()->getName() }}</td>
+                                    <td class="text-center">{{ $new->getTitle() }}</td>
+                                    <td class="text-center">{{ $new->getAuthor()->getName() }}</td>
+                                    <td class="text-center">{{ $new->getCreatedAt()->format('d/m/Y H:i:s') }}</td>
+                                    <td class="text-center">{{ $new->getType() }}</td>
                                     <td class="col-xs-2 text-center">
-                                        <a href="{{ route('edit-resident',  $resident->getId()) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        <form class="form-horizontal" method="POST" action="{{ route('delete-resident', ['id' => $resident->getId()]) }}">
+                                        <a href="{{ route('edit-news',  $new->getId()) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <form class="form-horizontal" method="POST" action="{{ route('delete-news', ['id' => $new->getId()]) }}">
                                             {{ csrf_field() }}
                                             <button type="submit"><i class="fa fa-trash"></i></button>
                                         </form>

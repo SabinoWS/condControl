@@ -5,10 +5,10 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="main-panel panel panel-default">
-                <div class="panel-heading">Editar Proprietário</div>
+                <div class="panel-heading">Editar Morador</div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('update-holder', ['id' => $user->getId()]) }}">
+                    <form class="form-horizontal" method="POST" action="{{ route('update-resident', ['id' => $user->getId()]) }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">

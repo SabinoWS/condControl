@@ -19,22 +19,21 @@ class UsersTableSeeder extends Seeder
         $admin = new User;
         $admin->name = 'admin';
         $admin->email = 'admin@hotmail.com';
-        $admin->password = Hash::make('admin');
+        $admin->password = Hash::make('123321');
         $admin->save();
         $admin->attachRole(Role::whereName('admin')->first());
-        $admin->attachRole(Role::whereName('manager')->first());
 
         // USER MANAGER 01
         $manager = new User;
-        $manager->name = 'sindico01';
-        $manager->email = 'sindico01@hotmail.com';
-        $manager->password = Hash::make('sindico01');
+        $manager->name = 'sindico';
+        $manager->email = 'sindico@hotmail.com';
+        $manager->password = Hash::make('123321');
         $manager->save();
         $manager->attachRole(Role::whereName('manager')->first());
 
         // Condominium 01
         $condominium                 = new Condominium;
-        $condominium->name           = '01 Condominium Administrativo';
+        $condominium->name           = 'CondControl Administração';
         $condominium->address        = 'address';
         $condominium->address_number = '231';
         $condominium->telephone      = '33449232';
@@ -43,7 +42,7 @@ class UsersTableSeeder extends Seeder
 
         // Condominium 02
         $condominium                 = new Condominium;
-        $condominium->name           = '02 Condominium Teste';
+        $condominium->name           = 'AAA Condominium';
         $condominium->address        = 'address';
         $condominium->address_number = '231';
         $condominium->telephone      = '33449232';
@@ -57,21 +56,20 @@ class UsersTableSeeder extends Seeder
 
         // USER HOST 01
         $host = new User;
-        $host->name = 'holder01';
-        $host->email = 'holder01@hotmail.com';
-        $host->password = Hash::make('holder01');
+        $host->name = 'Proprietario';
+        $host->email = 'proprietario@hotmail.com';
+        $host->password = Hash::make('123321');
         $host->condominium_id = '2';
         $host->save();
         $host->attachRole(Role::whereName('holder')->first());
 
         // USER RESIDENT 01
         $host = new User;
-        $host->name = 'resident01';
-        $host->email = 'resident01@hotmail.com';
-        $host->password = Hash::make('resident01');
+        $host->name = 'Morador';
+        $host->email = 'morador@hotmail.com';
+        $host->password = Hash::make('123321');
         $host->condominium_id = '2';
         $host->save();
         $host->attachRole(Role::whereName('resident')->first());
-
     }
 }

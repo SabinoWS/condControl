@@ -33,3 +33,29 @@
     color: white;
     background-color: #7A77BA;
 }
+
+/* NEW PANEL ----------------------------------------------- */
+.news-panel {
+    margin-top: 20px;
+}
+
+.news-panel > .panel-heading{
+    background-color: #5450A6;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.news-author {
+    margin: 5px 5px 0px 5px;
+    background-color: #f0f0f5;
+}
+
+.news-message {
+    padding: 0px 10px 10px 10px;
+}
+
+.news-footer {
+    /*border: solid yellow 2px;*/
+}

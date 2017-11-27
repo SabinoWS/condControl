@@ -10,8 +10,6 @@ Auth::routes();
 Route::get('/painel', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'administrador', 'middleware' => ['role:admin']], function() {
-    Route::get('painel', 'AdministratorController@index')->name('admin-panel');
-
     Route::prefix('gerenciar-sindicos')->group(function () {
         Route::get('listar', 'ManagerController@create')->name('list-manager');
         Route::get('listar', 'ManagerController@create')->name('list-manager');
@@ -39,16 +37,27 @@ Route::group(['prefix' => 'sindico', 'middleware' => ['role:manager']], function
         Route::post('editar', 'HolderController@update')->name('update-holder');
         Route::post('deletar', 'HolderController@delete')->name('delete-holder');
     });
+    Route::prefix('gerenciar-noticias')->group(function () {
+        Route::get('', 'NewsController@management')->name('management-news');
+        Route::get('criar', 'NewsController@create')->name('create-news');
+        Route::post('criar', 'NewsController@save')->name('save-news');
+        Route::get('editar/{id}', 'NewsController@edit')->name('edit-news');
+        Route::post('editar', 'NewsController@update')->name('update-news');
+        Route::post('deletar', 'NewsController@delete')->name('delete-news');
+    });
 });
 
-Route::group(['prefix' => 'proprietario', 'middleware' => ['role:host']], function() {
-    Route::get('painel', 'HostController@index')->name('host-panel');
-    Route::prefix('criar')->group(function () {
-        Route::get('resident', 'ResidentController@create')->name('create-resident');
-        Route::post('resident', 'ResidentController@save')->name('save-resident');
+Route::group(['prefix' => 'proprietario', 'middleware' => ['role:holder']], function() {
+    Route::prefix('gerenciar-moradores')->group(function () {
+        Route::get('listar', 'ResidentController@management')->name('management-resident');
+        Route::get('criar', 'ResidentController@create')->name('create-resident');
+        Route::post('criar', 'ResidentController@save')->name('save-resident');
+        Route::get('editar/{id}', 'ResidentController@edit')->name('edit-resident');
+        Route::post('editar', 'ResidentController@update')->name('update-resident');
+        Route::post('deletar', 'ResidentController@delete')->name('delete-resident');
     });
 });
 
 Route::group(['prefix' => 'morador', 'middleware' => ['role:resident']], function() {
-    Route::get('painel', 'ResidentController@index')->name('resident-panel');
+
 });
