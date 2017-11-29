@@ -30,9 +30,9 @@
                                     <td class="text-center">{{ $condominium->getManager()->name }}</td>
                                     <td class="col-xs-2 text-center">
                                         <a href="{{ route('edit-condominium',  $condominium->getId()) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        <form class="form-horizontal" method="POST" action="{{ route('delete-condominium', ['id' => $condominium->getId()]) }}">
+                                        <form class="inline form-inline" method="POST" action="{{ route('delete-condominium', ['id' => $condominium->getId()]) }}">
                                             {{ csrf_field() }}
-                                            <button type="submit"><i class="fa fa-trash"></i></button>
+                                            <button class="link-button"><i class="fa fa-trash"></i></button>
                                         </form>
                                     </td>
                                 </tr>
@@ -47,15 +47,6 @@
     </div>
 </div>
 @endsection
-
-{{-- <script
-  src="https://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script> --}}
-
-  {{-- <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
-  <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script> --}}
-  {{-- <script src="{{ asset('js/data_table/dt.js') }}"></script> --}}
 
 @push('scripts')
 <script type="text/javascript">

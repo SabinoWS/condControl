@@ -30,9 +30,9 @@
                                     <td class="text-center">{{ $resident->getCondominium()->getName() }}</td>
                                     <td class="col-xs-2 text-center">
                                         <a href="{{ route('edit-resident',  $resident->getId()) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        <form class="form-horizontal" method="POST" action="{{ route('delete-resident', ['id' => $resident->getId()]) }}">
+                                        <form class="inline form-inline" method="POST" action="{{ route('delete-resident', ['id' => $resident->getId()]) }}">
                                             {{ csrf_field() }}
-                                            <button type="submit"><i class="fa fa-trash"></i></button>
+                                            <button class="link-button" type="submit"><i class="fa fa-trash"></i></button>
                                         </form>
                                     </td>
                                 </tr>

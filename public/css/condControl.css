@@ -33,6 +33,23 @@
     color: white;
     background-color: #7A77BA;
 }
+/* MANAGEMENT */
+.link-button{
+    background:none!important;
+    color:inherit;
+    border:none;
+    padding:0!important;
+    font: inherit;
+    /*border is optional*/
+    /*border: solid red 2px;*/
+    /*border-bottom:1px solid #444;*/
+    cursor: pointer;
+}
+
+.inline {
+    display: inline;
+}
+
 
 /* NEW PANEL ----------------------------------------------- */
 .news-panel {

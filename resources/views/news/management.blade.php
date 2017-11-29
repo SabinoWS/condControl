@@ -34,9 +34,9 @@
                                     <td class="text-center">{{ $new->getType() }}</td>
                                     <td class="col-xs-2 text-center">
                                         <a href="{{ route('edit-news',  $new->getId()) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        <form class="form-horizontal" method="POST" action="{{ route('delete-news', ['id' => $new->getId()]) }}">
+                                        <form class="inline form-horizontal" method="POST" action="{{ route('delete-news', ['id' => $new->getId()]) }}">
                                             {{ csrf_field() }}
-                                            <button type="submit"><i class="fa fa-trash"></i></button>
+                                            <button class="link-button" type="submit"><i class="fa fa-trash"></i></button>
                                         </form>
                                     </td>
                                 </tr>
