@@ -237,10 +237,10 @@ http://www.templatemo.com/tm-406-flex
                 <div class="row">
                     <div class="col-md-7 col-sm-6">
                         <p>
-                            Faça um orçamento. <br />
                             Disponibilizamos diversas formas de nos contatar.<br />
                             Ficaremos felizes em responder a todas as suas dúvidas e atender suas necessidades.<br />
                             Consulte-nos sobre valores e pacotes de serviços.<br />
+                            Faça um orçamento. <br />
                           
                     	</p>
                         <ul class="contact-info">
