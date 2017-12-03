@@ -7,7 +7,7 @@
 
         <meta charset="utf-8">
         <title>CondControl</title>
-        <script src="https://use.fontawesome.com/e5239e72f2.js"></script>
+
     	<meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
@@ -157,7 +157,7 @@ http://www.templatemo.com/tm-406-flex
                     <div class="col-md-3 col-sm-6">
                         <div class="service-item" id="service-2">
                             <div class="service-icon">
-                                <i class="fa-newspaper-o"></i>
+                                <i class="fa fa-newspaper-o"></i>
                                  Notícias
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
@@ -192,7 +192,7 @@ http://www.templatemo.com/tm-406-flex
                             <div class="service-content">
                                 <div class="inner-service">
                                    <h3> Enquetes</h3>
-                                   <p>Crie enquetes e disponibilize para os moradores responderem online. Após respostas é
+                                   <p>Crie enquetes e disponibilize para os moradores responderem online. Após respostas é 
                                   possível verificar o resultado rapidamente e com gráficos que ilustram o resultado da enquete.</p>
                                 </div>
                             </div> <!-- /.service-content -->
@@ -241,7 +241,7 @@ http://www.templatemo.com/tm-406-flex
                             Ficaremos felizes em responder a todas as suas dúvidas e atender suas necessidades.<br />
                             Consulte-nos sobre valores e pacotes de serviços.<br />
                             Faça um orçamento. <br />
-
+                          
                     	</p>
                         <ul class="contact-info">
                             <li>Telefone:(51) 3251-1111 </li>
