@@ -149,7 +149,7 @@ http://www.templatemo.com/tm-406-flex
                             <div class="service-content">
                                 <div class="inner-service">
                                    <h3>Chat</h3>
-                                   <p>Canal de Interação Exclusivo entre os condominos e o síndico.</p>
+                                   <p>Canal de Interação Exclusivo entre os condôminos e o síndico.</p>
                                 </div>
                             </div> <!-- /.service-content -->
                         </div> <!-- /#service-1 -->
@@ -230,17 +230,17 @@ http://www.templatemo.com/tm-406-flex
                 <div class="row">
                     <div class="heading-section col-md-12 text-center">
                         <h2>Contato</h2>
-                        <p>Faça um orçamento</p>
+                        <p>Solicite um orçamento</p>
                     </div> <!-- /.heading-section -->
                 </div> <!-- /.row -->
 
                 <div class="row">
                     <div class="col-md-7 col-sm-6">
                         <p>
-                            Faça um orçamento. <br />
                             Disponibilizamos diversas formas de nos contatar.<br />
                             Ficaremos felizes em responder a todas as suas dúvidas e atender suas necessidades.<br />
                             Consulte-nos sobre valores e pacotes de serviços.<br />
+                            Faça um orçamento. <br />
                           
                     	</p>
                         <ul class="contact-info">
