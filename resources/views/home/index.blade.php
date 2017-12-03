@@ -143,7 +143,7 @@ http://www.templatemo.com/tm-406-flex
                     <div class="col-md-3 col-sm-6">
                         <div class="service-item" id="service-1">
                             <div class="service-icon">
-                                <i class="fa fa-file-code-o"></i>
+                                <i class=" fa-comments-o"></i>
                                 Chat
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
@@ -157,7 +157,7 @@ http://www.templatemo.com/tm-406-flex
                     <div class="col-md-3 col-sm-6">
                         <div class="service-item" id="service-2">
                             <div class="service-icon">
-                                <i class="fa fa-paper-plane-o"></i>
+                                <i class="fa-newspaper-o"></i>
                                  Notícias
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
