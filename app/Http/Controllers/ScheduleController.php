@@ -21,14 +21,15 @@ class ScheduleController extends Controller
     }
 
     public function chooseLocal(){
-        dd("aq");
-        $schedules = $this->localRepository->all();
-        return view('schedule.management')->with('schedules', $schedules);
+        $locals = $this->localRepository->all();
+        return view('schedule.locals')->with('locals', $locals);
     }
 
-    public function management(){
-        $schedules = $this->scheduleRepository->all();
-        return view('schedule.management')->with('schedules', $schedules);
+    public function management($id){
+        $local = $this->localRepository->find($id);
+        $schedules = $this->scheduleRepository->findAllForLocal($id);
+        
+        return view('schedule.management', ['local' => $local, 'schedules' => $schedules]);
     }
 
     public function create(){

@@ -24,7 +24,7 @@ class ScheduleRepository
         return $search->get()->all();
     }
 
-    public function findAllForCondominium($condominiumId){
+    public function findAllForLocal($condominiumId){
         $search = Schedule::whereHas('local.condominium', function($query) use($condominiumId){
             $query->where('condominium_id', "=", $condominiumId);
         });

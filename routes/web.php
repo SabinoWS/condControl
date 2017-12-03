@@ -11,12 +11,8 @@ Route::get('/painel', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'administrador', 'middleware' => ['permission:admin-area']], function() {
     Route::prefix('gerenciar-sindicos')->group(function () {
-        Route::get('listar', 'ManagerController@create')->name('list-manager');
-        Route::get('listar', 'ManagerController@create')->name('list-manager');
         Route::get('criar', 'ManagerController@create')->name('create-manager');
         Route::post('criar', 'ManagerController@save')->name('save-manager');
-        // Route::post('editar', 'ManagerController@edit')->name('save-manager');
-        // Route::post('deletar', 'ManagerController@delete')->name('save-manager');
     });
     Route::prefix('gerenciar-condominios')->group(function () {
         Route::get('listar', 'CondominiumController@management')->name('management-condominium');
@@ -70,6 +66,7 @@ Route::group(['prefix' => 'morador', 'middleware' => ['permission:resident-area'
     Route::prefix('gerenciar-agendamentos')->group(function () {
         Route::get('', 'ScheduleController@chooseLocal')->name('choose-local');
         Route::get('local/{id}', 'ScheduleController@management')->name('management-schedule');
+
         Route::get('criar', 'ScheduleController@create')->name('create-schedule');
         Route::post('criar', 'ScheduleController@save')->name('save-schedule');
         Route::get('editar/{id}', 'ScheduleController@edit')->name('edit-schedule');

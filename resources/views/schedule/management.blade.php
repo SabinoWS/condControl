@@ -12,7 +12,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <a href="{{ route('create-local') }}" class="round-icon-button fa fa-plus btn btn-default"></a>
+                            <a href="{{ route('create-schedule') }}" class="round-icon-button fa fa-plus btn btn-default"></a>
                         </div>
                     </div>
                     <table class="default-table table table-bordered" id="tabela">
@@ -25,14 +25,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse ($locals as $local)
+                            @forelse ($schedules as $schedule)
                                 <tr>
-                                    <td class="text-center">{{ $local->getName() }}</td>
-                                    <td class="text-center">{{ $local->getDescription() }}</td>
-                                    <td class="col-xs-2 text-center">{{ $local->getCapacity() }}</td>
+                                    <td class="text-center">{{ $schedule->getName() }}</td>
+                                    <td class="text-center">{{ $schedule->getDescription() }}</td>
+                                    <td class="col-xs-2 text-center">{{ $schedule->getCapacity() }}</td>
                                     <td class="col-xs-2 text-center">
-                                        <a href="{{ route('edit-local',  $local->getId()) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        <form class="inline form-horizontal" method="POST" action="{{ route('delete-local', ['id' => $local->getId()]) }}">
+                                        <a href="{{ route('edit-schedule',  $schedule->getId()) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <form class="inline form-horizontal" method="POST" action="{{ route('delete-schedule', ['id' => $schedule->getId()]) }}">
                                             {{ csrf_field() }}
                                             <button class="link-button" type="submit"><i class="fa fa-trash"></i></button>
                                         </form>

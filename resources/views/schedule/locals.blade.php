@@ -26,11 +26,7 @@
                                     <td class="text-center">{{ $local->getDescription() }}</td>
                                     <td class="col-xs-2 text-center">{{ $local->getCapacity() }}</td>
                                     <td class="col-xs-2 text-center">
-                                        <a href="{{ route('edit-local',  $local->getId()) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        <form class="inline form-horizontal" method="POST" action="{{ route('delete-local', ['id' => $local->getId()]) }}">
-                                            {{ csrf_field() }}
-                                            <button class="link-button" type="submit"><i class="fa fa-trash"></i></button>
-                                        </form>
+                                        <a href="{{ route('management-schedule',  $local->getId()) }}"><i class="fa fa-calendar" aria-hidden="true"></i></a>
                                     </td>
                                 </tr>
                             @empty
