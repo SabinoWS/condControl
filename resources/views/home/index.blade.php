@@ -149,7 +149,7 @@ http://www.templatemo.com/tm-406-flex
                             <div class="service-content">
                                 <div class="inner-service">
                                    <h3>Chat</h3>
-                                   <p>Canal de Interação Exclusivo entre os condominos e o síndico</p>
+                                   <p>Canal de Interação Exclusivo entre os condominos e o síndico.</p>
                                 </div>
                             </div> <!-- /.service-content -->
                         </div> <!-- /#service-1 -->
@@ -162,8 +162,8 @@ http://www.templatemo.com/tm-406-flex
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
                                 <div class="inner-service">
-                                   <h3>Condomínios Comerciais</h3>
-                                   <p>Construindo.</p>
+                                   <h3>Notícias</h3>
+                                   <p>Veja todos avisos ativos e históricos que foram adicionados ao seu condomínio.</p>
                                 </div>
                             </div> <!-- /.service-content -->
                         </div> <!-- /#service-1 -->
@@ -176,8 +176,9 @@ http://www.templatemo.com/tm-406-flex
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
                                 <div class="inner-service">
-                                   <h3>Imobiliárias</h3>
-                                   <p>Construindo.</p>
+                                   <h3>Reservas</h3>
+                                   <p>Faça com antecedência sua reserva de áreas comuns(salão de festas,
+                                   churrasqueira) diretamente pelo sistema, podendo incluir convidados.</p>
                                 </div>
                             </div> <!-- /.service-content -->
                         </div> <!-- /#service-1 -->
@@ -186,12 +187,13 @@ http://www.templatemo.com/tm-406-flex
                         <div class="service-item" id="service-4">
                             <div class="service-icon">
                                 <i class="fa fa-flask"></i>
-                                Votações
+                                Enquetes
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
                                 <div class="inner-service">
-                                   <h3>Empresas do ramo imobiliário</h3>
-                                   <p>Construindo.</p>
+                                   <h3> Enquetes</h3>
+                                   <p>Crie enquetes e disponibilize para os moradores responderem online. Após respostas é 
+                                  possível verificar o resultado rapidamente e com gráficos que ilustram o resultado da enquete.</p>
                                 </div>
                             </div> <!-- /.service-content -->
                         </div> <!-- /#service-1 -->
