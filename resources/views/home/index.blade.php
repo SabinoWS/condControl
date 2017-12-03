@@ -230,7 +230,7 @@ http://www.templatemo.com/tm-406-flex
                 <div class="row">
                     <div class="heading-section col-md-12 text-center">
                         <h2>Contato</h2>
-                        <p>Faça um orçamento</p>
+                        <p>Solicite um orçamento</p>
                     </div> <!-- /.heading-section -->
                 </div> <!-- /.row -->
 
