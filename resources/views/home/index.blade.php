@@ -7,7 +7,7 @@
 
         <meta charset="utf-8">
         <title>CondControl</title>
-        <script src="https://use.fontawesome.com/e5239e72f2.js"></script>
+
     	<meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
@@ -157,7 +157,7 @@ http://www.templatemo.com/tm-406-flex
                     <div class="col-md-3 col-sm-6">
                         <div class="service-item" id="service-2">
                             <div class="service-icon">
-                                <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                              <i class="fa fa-bullhorn" aria-hidden="true"></i>
                                  Notícias
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
