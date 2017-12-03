@@ -240,8 +240,8 @@ http://www.templatemo.com/tm-406-flex
                             Faça um orçamento. <br />
                             Disponibilizamos diversas formas de nos contatar.<br />
                             Ficaremos felizes em responder a todas as suas dúvidas e atender suas necessidades.<br />
-                            Valores: <br />
-                            Construindo...
+                            Consulte-nos sobre valores e pacotes de serviços.<br />
+                          
                     	</p>
                         <ul class="contact-info">
                             <li>Telefone:(51) 3251-1111 </li>
