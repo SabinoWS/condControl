@@ -63,7 +63,7 @@
                         <a title="Galeria" href="" class="no-style">
                             <i class="fa fa-camera-retro main-panel-button btn btn-default"></i>
                         </a>
-                        <a title="Reservar Local" href="" class="no-style">
+                        <a title="Reservar Local" href="{{ route('choose-local') }}" class="no-style">
                             <i class="fa fa-calendar main-panel-button btn btn-default"></i>
                         </a>
                     @endpermission

@@ -9,7 +9,7 @@ Auth::routes();
 
 Route::get('/painel', 'HomeController@index')->name('home');
 
-Route::group(['prefix' => 'administrador', 'middleware' => ['role:admin']], function() {
+Route::group(['prefix' => 'administrador', 'middleware' => ['permission:admin-area']], function() {
     Route::prefix('gerenciar-sindicos')->group(function () {
         Route::get('listar', 'ManagerController@create')->name('list-manager');
         Route::get('listar', 'ManagerController@create')->name('list-manager');
@@ -28,7 +28,7 @@ Route::group(['prefix' => 'administrador', 'middleware' => ['role:admin']], func
     });
 });
 
-Route::group(['prefix' => 'sindico', 'middleware' => ['role:manager']], function() {
+Route::group(['prefix' => 'sindico', 'middleware' => ['permission:manager-area']], function() {
     Route::prefix('gerenciar-proprietarios')->group(function () {
         Route::get('listar', 'HolderController@management')->name('management-holder');
         Route::get('criar', 'HolderController@create')->name('create-holder');
@@ -55,7 +55,7 @@ Route::group(['prefix' => 'sindico', 'middleware' => ['role:manager']], function
     });
 });
 
-Route::group(['prefix' => 'proprietario', 'middleware' => ['role:holder']], function() {
+Route::group(['prefix' => 'proprietario', 'middleware' => ['permission:holder-area']], function() {
     Route::prefix('gerenciar-moradores')->group(function () {
         Route::get('listar', 'ResidentController@management')->name('management-resident');
         Route::get('criar', 'ResidentController@create')->name('create-resident');
@@ -66,6 +66,14 @@ Route::group(['prefix' => 'proprietario', 'middleware' => ['role:holder']], func
     });
 });
 
-Route::group(['prefix' => 'morador', 'middleware' => ['role:resident']], function() {
-
+Route::group(['prefix' => 'morador', 'middleware' => ['permission:resident-area']], function() {
+    Route::prefix('gerenciar-agendamentos')->group(function () {
+        Route::get('', 'ScheduleController@chooseLocal')->name('choose-local');
+        Route::get('local/{id}', 'ScheduleController@management')->name('management-schedule');
+        Route::get('criar', 'ScheduleController@create')->name('create-schedule');
+        Route::post('criar', 'ScheduleController@save')->name('save-schedule');
+        Route::get('editar/{id}', 'ScheduleController@edit')->name('edit-schedule');
+        Route::post('editar', 'ScheduleController@update')->name('update-schedule');
+        Route::post('deletar', 'ScheduleController@delete')->name('delete-schedule');
+    });
 });
