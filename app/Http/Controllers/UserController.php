@@ -8,7 +8,7 @@ use app\User;
 use App\Models\Role;
 use Illuminate\Support\Facades\Hash;
 
-class ManagerController extends Controller
+class UserController extends Controller
 {
     public function index(){
         return view('manager.panel');

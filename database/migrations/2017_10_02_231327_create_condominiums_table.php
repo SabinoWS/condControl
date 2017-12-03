@@ -21,9 +21,11 @@ class CreateCondominiumsTable extends Migration
             $table->integer('address_number');
             $table->string('telephone', 13);
 
+
             $table->integer('manager_id')->unsigned();
             $table->foreign('manager_id')->references('id')->on('users');
 
+            $table->softDeletes();
             $table->timestamps();
         });
     }

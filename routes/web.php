@@ -45,6 +45,14 @@ Route::group(['prefix' => 'sindico', 'middleware' => ['role:manager']], function
         Route::post('editar', 'NewsController@update')->name('update-news');
         Route::post('deletar', 'NewsController@delete')->name('delete-news');
     });
+    Route::prefix('gerenciar-locais')->group(function () {
+        Route::get('', 'LocalController@management')->name('management-local');
+        Route::get('criar', 'LocalController@create')->name('create-local');
+        Route::post('criar', 'LocalController@save')->name('save-local');
+        Route::get('editar/{id}', 'LocalController@edit')->name('edit-local');
+        Route::post('editar', 'LocalController@update')->name('update-local');
+        Route::post('deletar', 'LocalController@delete')->name('delete-local');
+    });
 });
 
 Route::group(['prefix' => 'proprietario', 'middleware' => ['role:holder']], function() {

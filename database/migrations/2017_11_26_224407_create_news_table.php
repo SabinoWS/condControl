@@ -18,6 +18,7 @@ class CreateNewsTable extends Migration
             $table->string('title');
             $table->string('message');
             $table->string('type');
+            
             $table->timestamps();
 
             $table->integer('condominium_id')->unsigned()->nullable();

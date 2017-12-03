@@ -54,7 +54,7 @@ class UsersTableSeeder extends Seeder
         $manager->condominium_id = '2';
         $manager->save();
 
-        // USER HOST 01
+        // USER HOLDER 01
         $host = new User;
         $host->name = 'Proprietario';
         $host->email = 'proprietario@hotmail.com';
@@ -63,13 +63,16 @@ class UsersTableSeeder extends Seeder
         $host->save();
         $host->attachRole(Role::whereName('holder')->first());
 
+
         // USER RESIDENT 01
-        $host = new User;
-        $host->name = 'Morador';
-        $host->email = 'morador@hotmail.com';
-        $host->password = Hash::make('123321');
-        $host->condominium_id = '2';
-        $host->save();
-        $host->attachRole(Role::whereName('resident')->first());
+        $resident = new User;
+        $resident->name = 'Morador';
+        $resident->email = 'morador@hotmail.com';
+        $resident->password = Hash::make('123321');
+        $resident->condominium_id = '2';
+        $resident->save();
+        $resident->attachRole(Role::whereName('resident')->first());
+
+        $host->residents()->sync($resident);
     }
 }

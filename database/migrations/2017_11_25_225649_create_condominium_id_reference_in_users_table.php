@@ -27,6 +27,9 @@ class CreateCondominiumIdReferenceInUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('condominium_id_reference_in_users');
+        Schema::table('users', function($table)
+        {
+            $table->dropForeign(['condominium_id']);
+        });
     }
 }

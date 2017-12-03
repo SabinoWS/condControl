@@ -10,6 +10,14 @@
                     {{ auth()->getUser()->getCondominium()->getName() }}
                 </div>
 
+                {{-- {{ dump(auth()->getUser()->getCondominium()->getUsers()) }} --}}
+
+                @permission('resident-area')
+                    @if (auth()->getUser()->getHolders())
+                        Responsável: {{ auth()->getUser()->getHolders()->getName() }}
+                    @endif
+                @endpermission
+
                 <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">
@@ -38,6 +46,9 @@
                         </a>
                         <a title="Administrar Notícias" href="{{ route('management-news') }}" class="no-style">
                             <i class="fa fa-newspaper-o main-panel-button btn btn-default" aria-hidden="true"></i>
+                        </a>
+                        <a title="Administrar Locais" href="{{ route('management-local') }}" class="no-style">
+                            <i class="fa fa-map-marker main-panel-button btn btn-default" aria-hidden="true"></i>
                         </a>
                     @endpermission
                     @permission('holder-area')

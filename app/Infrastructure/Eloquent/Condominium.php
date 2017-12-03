@@ -3,21 +3,33 @@
 namespace App\Infrastructure\Eloquent;
 use App\User;
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Infrastructure\Eloquent\Local;
 
 class Condominium extends Model
 {
-     protected $table = 'condominiums';
+    use \Askedio\SoftCascade\Traits\SoftCascadeTrait;
+    use SoftDeletes;
 
-      protected $fillable = [
-        'name',
-        'address',
-        'address_number',
-        'telephone',
-        'manager_id '
+    protected $softCascade = ['users'];
+
+    protected $table = 'condominiums';
+    protected $dates = ['deleted_at'];
+    protected $fillable = [
+    'name',
+    'address',
+    'address_number',
+    'telephone',
+    'manager_id '
     ];
 
     public function manager(){ return $this->hasOne(User::Class, 'id', 'manager_id'); }
+
+    public function users(){ return $this->hasMany(User::Class, 'condominium_id', 'id'); }
+    public function getUsers(){ return $this->users; }
+
+    public function locals(){ return $this->hasMany(Local::Class, 'condominium_id', 'id'); }
+    public function getLocals(){ return $this->locals; }
 
     public function getId(){
         return $this->id;

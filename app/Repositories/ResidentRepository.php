@@ -38,6 +38,7 @@ class ResidentRepository
         $user->password = Hash::make($attributes['password']);
         $user->condominium_id = auth()->getUser()->getCondominium()->getId();
         $user->save();
+        $user->holders()->sync(auth()->getUser());
 
         $user->attachRole(Role::whereName('resident')->first());
     }
