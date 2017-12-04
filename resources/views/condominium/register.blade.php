@@ -14,7 +14,7 @@
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Nome</label>
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" autofocus>
+                                <input id="name" type="text" class="maxLetters20 form-control" name="name" value="{{ old('name') }}" autofocus>
                                 @if ($errors->has('name'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('name') }}</strong>
@@ -26,7 +26,7 @@
                         <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
                             <label for="address" class="col-md-4 control-label">Endereço</label>
                             <div class="col-md-6">
-                                <input id="address" type="text" class="form-control" name="address" value="{{ old('address') }}" autofocus>
+                                <input id="address" type="text" class="maxLetters50 form-control" name="address" value="{{ old('address') }}" autofocus>
                                 @if ($errors->has('address'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('address') }}</strong>
@@ -38,7 +38,7 @@
                         <div class="form-group{{ $errors->has('number') ? ' has-error' : '' }}">
                             <label for="number" class="col-md-4 control-label">Número</label>
                             <div class="col-md-6">
-                                <input id="number" type="text" class="form-control" name="number" value="{{ old('number') }}" autofocus>
+                                <input id="number" type="text" class="number form-control" name="number" value="{{ old('number') }}" autofocus>
                                 @if ($errors->has('number'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('number') }}</strong>
@@ -50,7 +50,7 @@
                         <div class="form-group{{ $errors->has('telephone') ? ' has-error' : '' }}">
                             <label for="telephone" class="col-md-4 control-label">Telefone</label>
                             <div class="col-md-6">
-                                <input id="telephone" type="text" class="form-control" name="telephone" value="{{ old('telephone') }}" autofocus>
+                                <input id="telephone" type="text" class="phone form-control" name="telephone" value="{{ old('telephone') }}" autofocus>
                                 @if ($errors->has('telephone'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('telephone') }}</strong>

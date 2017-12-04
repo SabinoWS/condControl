@@ -25,6 +25,7 @@
                         </thead>
                         <tbody>
                             @forelse ($condominiums as $condominium)
+                                @if ($condominium->getName() != "CondControl Administração")
                                 <tr>
                                     <td class="text-center">{{ $condominium->getName() }}</td>
                                     <td class="text-center">{{ $condominium->getManager()->name }}</td>
@@ -36,6 +37,7 @@
                                         </form>
                                     </td>
                                 </tr>
+                                @endif
                             @empty
 
                             @endforelse

@@ -193,7 +193,7 @@ http://www.templatemo.com/tm-406-flex
                                 <div class="inner-service">
                                    <h3> Enquetes</h3>
                                    <p>Crie enquetes e disponibilize para os moradores responderem online. Após respostas é
-                                  possível verificar o resultado rapidamente e com gráficos que ilustram o resultado da enquete.</p>
+                                  possível verificar o resultado rapidamente.</p>
                                 </div>
                             </div> <!-- /.service-content -->
                         </div> <!-- /#service-1 -->

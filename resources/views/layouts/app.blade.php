@@ -21,6 +21,8 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="{{ asset('js/mask/jquery.mask.js') }}"></script>
+    <script src="{{ asset('js/mask/maskUse.js') }}"></script>
 
     {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
     <div id="app">
