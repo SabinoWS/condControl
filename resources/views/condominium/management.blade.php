@@ -31,10 +31,10 @@
                                     <td class="text-center">{{ $condominium->getManager()->name }}</td>
                                     <td class="col-xs-2 text-center">
                                         <a href="{{ route('edit-condominium',  $condominium->getId()) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        <form class="inline form-inline" method="POST" action="{{ route('delete-condominium', ['id' => $condominium->getId()]) }}">
+                                        {{-- <form class="inline form-inline" method="POST" action="{{ route('delete-condominium', ['id' => $condominium->getId()]) }}">
                                             {{ csrf_field() }}
                                             <button class="link-button"><i class="fa fa-trash"></i></button>
-                                        </form>
+                                        </form> --}}
                                     </td>
                                 </tr>
                                 @endif

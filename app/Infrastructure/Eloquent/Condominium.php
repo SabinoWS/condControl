@@ -9,10 +9,11 @@ use App\Infrastructure\Eloquent\Local;
 class Condominium extends Model
 {
     use \Askedio\SoftCascade\Traits\SoftCascadeTrait;
-    use SoftDeletes;
+
 
     protected $softCascade = ['users'];
 
+    use SoftDeletes;
     protected $table = 'condominiums';
     protected $dates = ['deleted_at'];
     protected $fillable = [

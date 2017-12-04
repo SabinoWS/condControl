@@ -41,7 +41,6 @@ class CondominiumController extends Controller
 
     public function delete(Request $request){
         $condominium = $this->condominiumRepository->find($request->id);
-        $condominium->delete();
         return redirect()->route('management-condominium');
     }
 
