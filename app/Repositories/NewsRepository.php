@@ -20,7 +20,6 @@ class NewsRepository
         $search = News::whereHas('condominium', function($query){
             $query->where('condominium_id', "=", auth()->getUser()->getCondominium()->getId());
         });
-
         return $search->get()->all();
     }
 
@@ -28,7 +27,7 @@ class NewsRepository
         $search = News::whereHas('condominium', function($query) use($condominiumId){
             $query->where('condominium_id', "=", $condominiumId);
         });
-
+        $search = $search->orderBy('updated_at', 'desc');
         return $search->get()->all();
     }
 

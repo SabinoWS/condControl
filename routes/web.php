@@ -1,13 +1,13 @@
 <?php
 
 Route::get('/', function () {
-    // return view('welcome');
     return view('home.index');
 });
 
 Auth::routes();
 
 Route::get('/painel', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('start');
 
 Route::group(['prefix' => 'administrador', 'middleware' => ['permission:admin-area']], function() {
     Route::prefix('gerenciar-sindicos')->group(function () {

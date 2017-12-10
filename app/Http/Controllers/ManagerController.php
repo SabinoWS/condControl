@@ -20,8 +20,10 @@ class ManagerController extends Controller
 
     public function save(CreateUserRequest $request){
         $user = new User;
+
         $user->name = $request->name;
         $user->email = $request->email;
+        $user->condominium_id = auth()->getUser()->getCondominium()->getId();
         $user->password = Hash::make($request->password);
         $user->save();
 
