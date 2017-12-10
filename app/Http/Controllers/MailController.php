@@ -18,5 +18,7 @@ class MailController extends Controller
     {
         Mail::to('condcontrol@gmail.com')
             ->send(new \App\Mail\ContactMail($request->all()));
+
+        return view('home.index');
     }
 }
