@@ -19,16 +19,17 @@ class ManagerController extends Controller
     }
 
     public function save(CreateUserRequest $request){
-        $user = new User;
+            $user = new User;
 
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->condominium_id = auth()->getUser()->getCondominium()->getId();
-        $user->password = Hash::make($request->password);
-        $user->save();
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->condominium_id = auth()->getUser()->getCondominium()->getId();
+            $user->password = Hash::make($request->password);
+            $user->save();
+            $user->attachRole(Role::whereName('manager')->first());
 
-        $user->attachRole(Role::whereName('manager')->first());
+            $this->flashMessage($request, "success", "Cadastrado com sucesso!");
 
-        return redirect()->route('home');
+            return redirect()->route('home');
     }
 }

@@ -28,17 +28,19 @@ class ScheduleController extends Controller
     public function management($id){
         $local = $this->localRepository->find($id);
         $schedules = $this->scheduleRepository->findAllForLocal($id);
-        
+
         return view('schedule.management', ['local' => $local, 'schedules' => $schedules]);
     }
 
-    public function create(){
-        return view('schedule.register');
+    public function create(Request $request){
+        $local = $this->localRepository->find($request->id);
+        return view('schedule.register', ['local' => $local]);
     }
 
     public function save(Request $request){
-        $this->scheduleRepository->createNewSchedule($request->all());
-        return redirect()->route('management-schedule');
+        $schedule = $this->scheduleRepository->createNewSchedule($request->all());
+        $local_id = $schedule->getLocal()->getId();
+        return redirect()->route('management-schedule', $local_id);
     }
 
     public function edit($id){
@@ -48,13 +50,13 @@ class ScheduleController extends Controller
 
     public function update(Request $request){
         $this->scheduleRepository->editSchedule($request->all());
-        return redirect()->route('management-schedule');
+        return redirect()->route('management-schedule', $request->id);
     }
 
     public function delete(Request $request){
         $schedule = $this->scheduleRepository->find($request->id);
         $schedule->delete();
-        return redirect()->route('management-schedule');
+        return redirect()->route('management-schedule', $request->id);
     }
 
 }

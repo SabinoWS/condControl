@@ -10,6 +10,7 @@
 
     	<meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 <!--
 Flex Template
 http://www.templatemo.com/tm-406-flex
@@ -253,7 +254,8 @@ http://www.templatemo.com/tm-406-flex
                     </div> <!-- /.col-md-7 -->
                     <div class="col-md-5 col-sm-6">
                         <div class="contact-form">
-                            <form method="post" name="contactform" id="contactform">
+                            <form method="POST" name="contactform" id="contactform" action="{{ route('mail') }}">
+                                {{ csrf_field() }}
                                 <p>
                                     <input name="name" type="text" id="name" placeholder="Seu Nome">
                                 </p>
@@ -266,7 +268,7 @@ http://www.templatemo.com/tm-406-flex
                                 <p>
                                     <textarea name="comments" id="comments" placeholder="Mensagem"></textarea>
                                 </p>
-                                <input type="button" class="mainBtn" id="submit" value="Enviar Mensagem">
+                                <input type="submit" class="mainBtn" id="submit" value="Enviar Mensagem">
                             </form>
                         </div> <!-- /.contact-form -->
                     </div> <!-- /.col-md-5 -->

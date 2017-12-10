@@ -7,6 +7,7 @@ use App\User;
 use App\Models\Role;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Carbon\Carbon;
 
 class ScheduleRepository
 {
@@ -24,20 +25,15 @@ class ScheduleRepository
         return $search->get()->all();
     }
 
-    public function findAllForLocal($condominiumId){
-        $search = Schedule::whereHas('local.condominium', function($query) use($condominiumId){
-            $query->where('condominium_id', "=", $condominiumId);
-        });
-
+    public function findAllForLocal($localId){
+        $search = Schedule::whereHas('local', function($query) use($localId){
+            $query->where('local_id', "=", $localId);
+        })->orderBy('local_schedules.reservation_date', 'desc');
         return $search->get()->all();
     }
 
     public function find($id){
-        $search = Schedule::whereHas('local.condominium', function($query){
-            $query->where('condominium_id', "=", auth()->getUser()->getCondominium()->getId());
-        });
-        $search = $search->where('schedules.id', '=', $id);
-
+        $search = $this->scheduleEloquent->where('id', '=', $id);
         return $search->get()->first();
     }
 
@@ -48,14 +44,14 @@ class ScheduleRepository
         $schedule->reservation_date = $attributes['reservation_date'];
 
         $schedule->save();
+
+        return $schedule;
     }
 
     public function editSchedule($attributes){
-        $schedule           = $this->scheduleEloquent->find($attributes['id']);
-        $schedule->user_id = auth()->getUser()->getId();
-        $schedule->local_id = $attributes['local_id'];
-        $schedule->reservation_date = $attributes['reservation_date'];
-
+        $schedule = $this->scheduleEloquent->find($attributes['id']);
+        $date = Carbon::createFromFormat('d/m/Y', $attributes['reservation_date']);
+        $schedule->reservation_date = $date;
         return $schedule->save();
     }
 

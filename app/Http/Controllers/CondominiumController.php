@@ -26,21 +26,24 @@ class CondominiumController extends Controller
 
     public function save(CreateCondominiumRequest $request){
         $this->condominiumRepository->createNewCondominium($request->all());
+        $this->flashMessage($request, "success", "Cadastrado com sucesso!");
         return redirect()->route('management-condominium');
     }
 
-    public function edit($id){
-        $condominium = $this->condominiumRepository->find($id);
+    public function edit(Request $request){
+        $condominium = $this->condominiumRepository->find($request->id);
         return view('condominium.edit')->with('condominium', $condominium);
     }
 
     public function update(CreateCondominiumRequest $request){
         $this->condominiumRepository->editCondominium($request->all());
+        $this->flashMessage($request, "success", "Editado com sucesso!");
         return redirect()->route('management-condominium');
     }
 
     public function delete(Request $request){
         $condominium = $this->condominiumRepository->find($request->id);
+        $this->flashMessage($request, "success", "Deletado com sucesso!");
         return redirect()->route('management-condominium');
     }
 

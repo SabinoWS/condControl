@@ -11,7 +11,9 @@
                     <form class="form-horizontal" method="POST" action="{{ route('save-schedule') }}">
                         {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
+                        <input id="local_id" type="hidden" class="form-control" name="local_id" value="{{ $local->getId() }}" autofocus>
+
+                        {{-- <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
                             <label for="description" class="col-md-4 control-label">Observações (Opcional)</label>
                             <div class="col-md-6">
                                 <input id="description" type="text" class="form-control" name="description" value="{{ old('description') }}" autofocus>
@@ -21,12 +23,12 @@
                                     </span>
                                 @endif
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="form-group{{ $errors->has('capacity') ? ' has-error' : '' }}">
                             <label for="capacity" class="col-md-4 control-label">Data</label>
                             <div class="col-md-6">
-                                <input id="capacity" type="date" class="form-control" name="capacity" value="{{ old('capacity') }}" autofocus>
+                                <input id="reservation_date" type="date" class="form-control" name="reservation_date" value="{{ old('capacity') }}" autofocus>
                                 @if ($errors->has('capacity'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('capacity') }}</strong>

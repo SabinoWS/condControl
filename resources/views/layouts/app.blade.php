@@ -79,6 +79,15 @@
                 </div>
             </div>
         </nav>
+
+        @if(session()->has('message.level'))
+            <div class="container">
+                <div class="col-md-8 col-md-offset-2 text-center alert alert-{{ session('message.level') }}">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    {!! session('message.content') !!}
+                </div>
+            </div>
+        @endif
         @yield('content')
     </div>
 

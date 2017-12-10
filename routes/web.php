@@ -6,6 +6,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::post('/mail', 'MailController@mail')->name('mail');
+
 Route::get('/painel', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('start');
 
@@ -67,7 +69,7 @@ Route::group(['prefix' => 'morador', 'middleware' => ['permission:resident-area'
         Route::get('', 'ScheduleController@chooseLocal')->name('choose-local');
         Route::get('local/{id}', 'ScheduleController@management')->name('management-schedule');
 
-        Route::get('criar', 'ScheduleController@create')->name('create-schedule');
+        Route::get('criar/{id}', 'ScheduleController@create')->name('create-schedule');
         Route::post('criar', 'ScheduleController@save')->name('save-schedule');
         Route::get('editar/{id}', 'ScheduleController@edit')->name('edit-schedule');
         Route::post('editar', 'ScheduleController@update')->name('update-schedule');
