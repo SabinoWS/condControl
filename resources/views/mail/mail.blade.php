@@ -1,9 +1,9 @@
 <h1>Contato CondControl</h1>
 <br />
-</strong>Nome:</strong> {{ $request->name }}
+</strong>Nome:</strong> {{ $data['name'] }}
 <br />
-</strong>Email:</strong> {{ $request->email }}
+</strong>Email:</strong> {{ $data['email'] }}
 <br />
-</strong>Assunto:</strong> {{ $request->subject }}
+</strong>Assunto:</strong> {{ $data['subject'] }}
 <br />
-</strong>Texto:</strong> {{ $request->comments }}
+</strong>Texto:</strong> {{ $data['comments'] }}
