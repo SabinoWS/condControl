@@ -20,7 +20,12 @@ class ScheduleCreateRequest extends FormRequest
 
     public function rules()
     {
-        $this->reservation_date = Carbon::createFromFormat('d/m/Y', $this->reservation_date);
+        if(strlen($this->reservation_date) == 10) {
+            $this->reservation_date = Carbon::createFromFormat('d/m/Y', $this->reservation_date);
+        }
+        else{
+            $this->reservation_date = Carbon::now();
+        }
         return [
             'reservation_date' => ['required', 'date', 'after:today',
             new UniqueSchedule($this->local_id)
@@ -35,6 +40,7 @@ class ScheduleCreateRequest extends FormRequest
             'reservation_date.date'                  => 'A data deve ser válida!',
             'reservation_date.after'                  => 'A data deve ser posterior à data de hoje!',
             'reservation_date.unique'                  => 'Esta data já está reservada!',
+            'reservation_date.min'                  => 'Data inválida!'
         ];
     }
 
