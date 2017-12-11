@@ -41,7 +41,8 @@ class ScheduleRepository
         $schedule = new Schedule;
         $schedule->user_id = auth()->getUser()->getId();
         $schedule->local_id = $attributes['local_id'];
-        $schedule->reservation_date = $attributes['reservation_date'];
+        $date = Carbon::createFromFormat('d/m/Y', $attributes['reservation_date']);
+        $schedule->reservation_date = $date;
 
         $schedule->save();
 

@@ -25,13 +25,13 @@
                             </div>
                         </div> --}}
 
-                        <div class="form-group{{ $errors->has('capacity') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('reservation_date') ? ' has-error' : '' }}">
                             <label for="capacity" class="col-md-4 control-label">Data</label>
                             <div class="col-md-6">
-                                <input id="reservation_date" type="date" class="form-control" name="reservation_date" value="{{ old('capacity') }}" autofocus>
-                                @if ($errors->has('capacity'))
+                                <input id="reservation_date" type="text" class="date form-control" name="reservation_date" value="{{ old('capacity') }}" autofocus>
+                                @if ($errors->has('reservation_date'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('capacity') }}</strong>
+                                        <strong>{{ $errors->first('reservation_date') }}</strong>
                                     </span>
                                 @endif
                             </div>

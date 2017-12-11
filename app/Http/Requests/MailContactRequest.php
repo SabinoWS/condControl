@@ -14,10 +14,10 @@ class MailContactRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'           => 'required|min:4|max:100',
-            'email'          => 'required|email',
-            'subject'        => 'required|min:6|max:100',
-            'comments'       => 'required|min:10|max:300'
+            'name'           => 'required|max:100',
+            'email'          => 'required',
+            'subject'        => 'required|max:100',
+            'comments'       => 'required|max:300'
         ];
     }
 }

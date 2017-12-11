@@ -6,6 +6,7 @@ use App\Repositories\LocalRepository;
 use App\Repositories\ScheduleRepository;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateUserRequest;
+use App\Http\Requests\ScheduleCreateRequest;
 
 class ScheduleController extends Controller
 {
@@ -37,7 +38,8 @@ class ScheduleController extends Controller
         return view('schedule.register', ['local' => $local]);
     }
 
-    public function save(Request $request){
+    public function save(ScheduleCreateRequest $request){
+        // dd($request->reservation_date);
         $schedule = $this->scheduleRepository->createNewSchedule($request->all());
         $local_id = $schedule->getLocal()->getId();
         $this->flashMessage($request, "success", "Agendamento efetuado com sucesso!");
