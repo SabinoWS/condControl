@@ -19,12 +19,12 @@
                     </form>
                     <br />
                     <br />
+                    <div class="row text-center">
                         @foreach ($photos as $photo)
-                        <div class="row text-center">
-                            <img class="enlarge" src="{{ asset($photo->getName()) }}" alt="Smiley face" height="450" width="600">
-                        </div>
-                        <br />
+                            <img class="enlarge" src="{{ asset($photo->getName()) }}" alt="Foto Condominio" height="150" width="250">
                         @endforeach
+                    </div>
+                    <br />
 
                 </div>
             </div>

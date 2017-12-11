@@ -79,8 +79,8 @@
 
 
 .enlarge:hover {
-	transform:scale(2,2);
-	transform-origin:0 0;
+	transform:scale(3,3);
+	transform-origin:2 2;
 }
 
 .chat-message {
