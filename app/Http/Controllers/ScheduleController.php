@@ -40,6 +40,7 @@ class ScheduleController extends Controller
     public function save(Request $request){
         $schedule = $this->scheduleRepository->createNewSchedule($request->all());
         $local_id = $schedule->getLocal()->getId();
+        $this->flashMessage($request, "success", "Agendamento efetuado com sucesso!");
         return redirect()->route('management-schedule', $local_id);
     }
 
@@ -50,12 +51,14 @@ class ScheduleController extends Controller
 
     public function update(Request $request){
         $this->scheduleRepository->editSchedule($request->all());
+        $this->flashMessage($request, "success", "Agendamento editado com sucesso!");
         return redirect()->route('management-schedule', $request->id);
     }
 
     public function delete(Request $request){
         $schedule = $this->scheduleRepository->find($request->id);
         $schedule->delete();
+        $this->flashMessage($request, "success", "Agendamento excluído com sucesso!");
         return redirect()->route('management-schedule', $schedule->getLocal()->getId());
     }
 
