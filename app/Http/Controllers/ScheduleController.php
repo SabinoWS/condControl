@@ -56,7 +56,7 @@ class ScheduleController extends Controller
     public function delete(Request $request){
         $schedule = $this->scheduleRepository->find($request->id);
         $schedule->delete();
-        return redirect()->route('management-schedule', $request->id);
+        return redirect()->route('management-schedule', $schedule->getLocal()->getId());
     }
 
 }
