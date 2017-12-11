@@ -28,7 +28,10 @@ class ScheduleRepository
     public function findAllForLocal($localId){
         $search = Schedule::whereHas('local', function($query) use($localId){
             $query->where('local_id', "=", $localId);
-        })->orderBy('local_schedules.reservation_date', 'desc');
+        })->orderBy('local_schedules.reservation_date', 'asc');
+
+        $search = $search->where("reservation_date", ">=" ,Carbon::now());
+
         return $search->get()->all();
     }
 
@@ -38,10 +41,11 @@ class ScheduleRepository
     }
 
     public function createNewSchedule($attributes){
+        $date = Carbon::createFromFormat('d/m/Y', $attributes['reservation_date']);
         $schedule = new Schedule;
         $schedule->user_id = auth()->getUser()->getId();
+        $schedule->day = $date->year.$date->month.$date->day;
         $schedule->local_id = $attributes['local_id'];
-        $date = Carbon::createFromFormat('d/m/Y', $attributes['reservation_date']);
         $schedule->reservation_date = $date;
 
         $schedule->save();

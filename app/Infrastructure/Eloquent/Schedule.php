@@ -15,7 +15,8 @@ class Schedule extends Model
       protected $fillable = [
         'user_id',
         'local_id',
-        'reservation_date'
+        'reservation_date',
+        'day'
     ];
 
     protected $dates = ['reservation_date'];

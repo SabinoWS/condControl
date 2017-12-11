@@ -39,7 +39,6 @@ class ScheduleController extends Controller
     }
 
     public function save(ScheduleCreateRequest $request){
-        // dd($request->reservation_date);
         $schedule = $this->scheduleRepository->createNewSchedule($request->all());
         $local_id = $schedule->getLocal()->getId();
         $this->flashMessage($request, "success", "Agendamento efetuado com sucesso!");
