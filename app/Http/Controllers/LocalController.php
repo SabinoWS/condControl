@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Repositories\LocalRepository;
 use Illuminate\Http\Request;
+use App\Http\Requests\LocalEditRequest;
 use App\Http\Requests\CreateUserRequest;
+use App\Http\Requests\LocalCreateRequest;
 
 class LocalController extends Controller
 {
@@ -23,8 +25,9 @@ class LocalController extends Controller
         return view('local.register');
     }
 
-    public function save(Request $request){
+    public function save(LocalCreateRequest $request){
         $this->localRepository->createNewLocal($request->all());
+        $this->flashMessage($request, "success", "Local cadastrado com sucesso!");
         return redirect()->route('management-local');
     }
 
@@ -33,8 +36,9 @@ class LocalController extends Controller
         return view('local.edit')->with('local', $local);
     }
 
-    public function update(Request $request){
+    public function update(LocalEditRequest $request){
         $this->localRepository->editLocal($request->all());
+        $this->flashMessage($request, "success", "Local editado com sucesso!");
         return redirect()->route('management-local');
     }
 

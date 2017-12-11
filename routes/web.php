@@ -76,3 +76,15 @@ Route::group(['prefix' => 'morador', 'middleware' => ['permission:resident-area'
         Route::post('deletar', 'ScheduleController@delete')->name('delete-schedule');
     });
 });
+
+Route::group(['prefix' => 'chat', 'middleware' => ['permission:resident-area']], function() {
+    Route::get('', 'ChatController@index')->name('chat-board');
+    Route::post('/send', 'ChatController@send')->name('chat-send');
+    Route::get('/receive-all', 'ChatController@receiveAll')->name('chat-receive');
+});
+
+Route::group(['prefix' => 'galery', 'middleware' => ['permission:resident-area']], function() {
+    Route::get('', 'GaleryController@index')->name('galery-board');
+    Route::post('/send', 'GaleryController@send')->name('galery-send');
+    Route::get('/receive-all', 'GaleryController@receiveAll')->name('galery-receive');
+});

@@ -28,7 +28,7 @@ class ManagerController extends Controller
             $user->save();
             $user->attachRole(Role::whereName('manager')->first());
 
-            $this->flashMessage($request, "success", "Cadastrado com sucesso!");
+            $this->flashMessage($request, "success", "Síndico cadastrado com sucesso!");
 
             return redirect()->route('home');
     }

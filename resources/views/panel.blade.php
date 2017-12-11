@@ -57,10 +57,10 @@
                         </a>
                     @endpermission
                     @permission('resident-area')
-                        <a title="Mensagens" href="" class="no-style">
+                        <a title="Mensagens" href="{{ route('chat-board') }}" class="no-style">
                             <i class="fa fa-envelope-o main-panel-button btn btn-default"></i>
                         </a>
-                        <a title="Galeria" href="" class="no-style">
+                        <a title="Galeria" href="{{ route('galery-board') }}" class="no-style">
                             <i class="fa fa-camera-retro main-panel-button btn btn-default"></i>
                         </a>
                         <a title="Reservar Local" href="{{ route('choose-local') }}" class="no-style">

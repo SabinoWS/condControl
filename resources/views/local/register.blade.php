@@ -38,7 +38,7 @@
                         <div class="form-group{{ $errors->has('capacity') ? ' has-error' : '' }}">
                             <label for="capacity" class="col-md-4 control-label">Capacidade</label>
                             <div class="col-md-6">
-                                <input id="capacity" type="text" class="form-control" name="capacity" value="{{ old('capacity') }}" autofocus>
+                                <input id="capacity" type="text" class="number form-control" name="capacity" value="{{ old('capacity') }}" autofocus>
                                 @if ($errors->has('capacity'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('capacity') }}</strong>

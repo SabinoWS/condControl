@@ -33,7 +33,6 @@ http://www.templatemo.com/tm-406-flex
                     <div class="row">
                         <div class="col-md-12 text-center">
                             <ul class="social-icons">
-
                                 @if (Route::has('login'))
                                     <div class="top-right links">
                                         @auth
@@ -90,6 +89,14 @@ http://www.templatemo.com/tm-406-flex
                                 <div class="overlay"></div>
                                 <img src="{{ asset('home/images/condominio.jpg') }}" alt="">
                                 <div class="slider-caption visible-md visible-lg">
+                                    @if(session()->has('message.level'))
+                                        <div class="container">
+                                            <div class="col-md-8 col-md-offset-2 text-center alert alert-{{ session('message.level') }}">
+                                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                                {!! session('message.content') !!}
+                                            </div>
+                                        </div>
+                                    @endif
                                     <h2>Facilidade em Gerenciamento</h2>
                                     <p>Agilize sua vida</p>
                                     @if (Route::has('login'))
