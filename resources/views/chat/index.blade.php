@@ -35,7 +35,9 @@
 @push('scripts')
     <script>
 
-    getMessages();
+    setInterval(function() {
+        getMessages();
+    }, 5000)
 
     function buildChat(messages){
         $('#message').val("");

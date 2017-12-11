@@ -21,7 +21,7 @@
                     <br />
                         @foreach ($photos as $photo)
                         <div class="row text-center">
-                            <img src="{{ asset($photo->getName()) }}" alt="Smiley face" height="450" width="600">
+                            <img class="enlarge" src="{{ asset($photo->getName()) }}" alt="Smiley face" height="450" width="600">
                         </div>
                         <br />
                         @endforeach

@@ -76,3 +76,9 @@
 .news-footer {
     /*border: solid yellow 2px;*/
 }
+
+
+.enlarge:hover {
+	transform:scale(2,2);
+	transform-origin:0 0;
+}
