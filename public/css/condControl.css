@@ -79,8 +79,14 @@
 
 
 .enlarge:hover {
+
 	transform:scale(3,3);
 	transform-origin:2 2;
+}
+
+.galery-image{
+    border: #6764B0 solid 2px;
+    margin-bottom: 20px;
 }
 
 .chat-message {

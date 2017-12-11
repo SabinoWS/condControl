@@ -21,7 +21,7 @@
                     <br />
                     <div class="row text-center">
                         @foreach ($photos as $photo)
-                            <img class="enlarge" src="{{ asset($photo->getName()) }}" alt="Foto Condominio" height="150" width="250">
+                            <img class="galery-image enlarge" src="{{ asset($photo->getName()) }}" alt="Foto Condominio" height="150" width="250">
                         @endforeach
                     </div>
                     <br />
