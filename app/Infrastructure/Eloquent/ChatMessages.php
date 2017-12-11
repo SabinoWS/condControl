@@ -32,10 +32,16 @@ class ChatMessages extends Model
     }
 
     public function toArray(){
+        if ((auth()->getUser()->getId() == $this->getUser()->getId()))
+            $color =  "#cce0ff";
+        else
+            $color = "#f0f0f5";
+
         return [
             'created_at' => $this->created_at->format('Y/m H:i'),
             'userName' => $this->user->getName(),
-            'message' => $this->message
+            'message' => $this->message,
+            'color' => $color
         ];
     }
 

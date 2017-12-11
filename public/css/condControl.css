@@ -82,3 +82,8 @@
 	transform:scale(2,2);
 	transform-origin:0 0;
 }
+
+.chat-message {
+    border-radius: 20px;
+    padding: 1px 15px 1px 15px;
+}

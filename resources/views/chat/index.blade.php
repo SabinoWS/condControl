@@ -35,12 +35,13 @@
 @push('scripts')
     <script>
 
+    getMessages();
+
     setInterval(function() {
         getMessages();
     }, 5000)
 
     function buildChat(messages){
-        $('#message').val("");
         $('#chat_messages').html("");
         messages.forEach(function(message){
             $('#chat_messages').append(
@@ -52,7 +53,7 @@
                     <strong class="chat-sender">
                         `+ message.userName + `:
                     </strong>
-                    <span class="chat-message">
+                    <span class="chat-message" style="background-color:`+ message.color+ `;"">
                         `+ message.message + `
                     </span>
                 </div>
@@ -64,6 +65,7 @@
     $('#sendMessage').click(function(){
         var that = this;
         var message = $('#message').val();
+        $('#message').val("");
         $.ajax({
             method: "POST",
             url: "chat/send",
@@ -75,7 +77,6 @@
     });
 
     function getMessages(){
-        console.log("GetMessages");
         var that = this;
         $.ajax({
             method: "GET",
