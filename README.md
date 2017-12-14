@@ -1,5 +1,9 @@
 # CondControl
 
+### Veja Funcionando
+[Clique aqui - CondControl Hospedagem KingHost](http://condcontrol.kinghost.net/public/)
+###### Usuários: sindico@hotmail.com / proprietario@hotmail.com Senhas: 123321
+
 ### Resumo
 Trabalho para a cadeira Projetos IV do curso de Análise e Desenvolvimento de Sistemas.
 
