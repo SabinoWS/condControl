@@ -180,13 +180,12 @@ http://www.templatemo.com/tm-406-flex
                         <div class="service-item" id="service-3">
                             <div class="service-icon">
                                 <i class="fa fa-thumb-tack"></i>
-                                Reservas
+                                Galeria
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
                                 <div class="inner-service">
-                                   <h3>Reservas</h3>
-                                   <p>Faça com antecedência sua reserva de áreas comuns(salão de festas,
-                                   churrasqueira) diretamente pelo sistema, podendo incluir convidados.</p>
+                                   <h3>Galerias</h3>
+                                   <p>Envie fotos para melhorar a comunidade do condominio.</p>
                                 </div>
                             </div> <!-- /.service-content -->
                         </div> <!-- /#service-1 -->
