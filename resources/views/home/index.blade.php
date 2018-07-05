@@ -179,7 +179,7 @@ http://www.templatemo.com/tm-406-flex
                     <div class="col-md-3 col-sm-6">
                         <div class="service-item" id="service-3">
                             <div class="service-icon">
-                                <i class="fa fa-thumb-tack"></i>
+                                <i class="fa fa-camera"></i>
                                 Galeria
                             </div> <!-- /.service-icon -->
                             <div class="service-content">
