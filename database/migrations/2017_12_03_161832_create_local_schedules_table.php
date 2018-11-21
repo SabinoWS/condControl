@@ -20,7 +20,7 @@ class CreateLocalSchedulesTable extends Migration
             $table->integer('local_id')->unsigned();
             $table->foreign('local_id')->references('id')->on('locals');
 
-            $table->timestamp('reservation_date');
+            $table->timestamp('reservation_date')->default('2018-01-01-');
 
             $table->timestamps();
         });
