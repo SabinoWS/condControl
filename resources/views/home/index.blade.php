@@ -211,7 +211,7 @@ http://www.templatemo.com/tm-406-flex
 
 
 
-        <div class="content-section" id="our-team">
+        <div class="content-section" id="service-1">
             <div class="container">
                 <div class="row">
                     <div class="heading-section col-md-12 text-center">
