@@ -26,14 +26,16 @@ class NewsCreateRequest extends FormRequest
         return [
             'title'                  => 'required|min:4|max:100',
             'message'                 => 'required|min:5|max:300',
+            'type'                 => 'required',
         ];
     }
 
     public function messages()
     {
         return [
-            'title.required'                  => 'O título é obrigatório!',
-            'message.required'                 => 'O campo de mensagem é obrigatório!',
+            'title.required'                    => 'O título é obrigatório!',
+            'message.required'                  => 'O campo de mensagem é obrigatório!',
+            'type.required'                     => 'O campo tipo é obrigatório!',
         ];
     }
 }

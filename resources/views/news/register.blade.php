@@ -26,7 +26,7 @@
                         <div class="form-group{{ $errors->has('message') ? ' has-error' : '' }}">
                             <label for="message" class="col-md-4 control-label">Mensagem</label>
                             <div class="col-md-6">
-                                <input id="message" type="text" class="form-control" name="message" value="{{ old('message') }}" autofocus>
+                                <textarea id="message" class="form-control" name="message" row="3">{{ old('message') }}</textarea>
                                 @if ($errors->has('message'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('message') }}</strong>

@@ -33,10 +33,11 @@
                                     <td class="text-center">{{ $new->getCreatedAt()->format('d/m/Y H:i:s') }}</td>
                                     <td class="text-center">{{ $new->getType() }}</td>
                                     <td class="col-xs-2 text-center">
-                                        <a href="{{ route('edit-news',  $new->getId()) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <a href="{{ route('edit-news',  $new->getId()) }}"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></a>
+                                        &nbsp &nbsp
                                         <form class="inline form-horizontal" method="POST" action="{{ route('delete-news', ['id' => $new->getId()]) }}">
                                             {{ csrf_field() }}
-                                            <button class="link-button" type="submit"><i class="fa fa-trash"></i></button>
+                                            <button class="link-button" type="submit"><i class="fa fa-trash fa-2x"></i></button>
                                         </form>
                                     </td>
                                 </tr>

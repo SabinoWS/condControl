@@ -72,7 +72,7 @@ http://www.templatemo.com/tm-406-flex
                                         <li class="active"><a href="#">Home</a></li>
                                         <li><a href="#services">Vantagens</a></li>
                                         <li><a href="#our-team">Quem Somos</a></li>
-                                        <li><a href="#contact">Investimento</a></li>
+                                        <li><a href="#contact">Contato</a></li>
                                     </ul>
                                 </div> <!-- /.main-menu -->
                             </div> <!-- /.row -->
@@ -98,7 +98,7 @@ http://www.templatemo.com/tm-406-flex
                                         </div>
                                     @endif
                                     <h2>Facilidade em Gerenciamento</h2>
-                                    <p>Agilize sua vida</p>
+                                    <p style="text-shadow: 1px 1px black">Administre seu condomínio</p>
                                     @if (Route::has('login'))
                                         <div class="top-right links">
                                             @auth
@@ -124,7 +124,7 @@ http://www.templatemo.com/tm-406-flex
                     <div class="z10 heading-section text-center">
 
                         <h2>Gerenciamento</h2>
-                        <p>Agilize sua vida</p>
+                        <p style="text-shadow: 1px 1px black">Administre seu condomínio</p>
                         @if (Route::has('login'))
                             <div class="top-right links">
                                 @auth
@@ -250,11 +250,10 @@ http://www.templatemo.com/tm-406-flex
                             Faça um orçamento. <br />
 
                     	</p>
-                        <ul class="contact-info">
-                            <li>Telefone:(51) 3251-1111 </li>
-                            <li>Email: <a href="mailto:sabino.th@hotmail.com">sabino.th@hotmail.com</a></li>
-                            <li>Email: <a href="mailto:tiago.rs@hotmail.com">tiago.rs@hotmail.com</a></li>
-                            <li>Endereço: Av. Sertório, 5310 - Porto Alegre - RS</li>
+                        <ul style="font-size: 15px;" class="contact-info">
+                            <li><strong>Telefone:</strong> (51) 3251-1111 </li>
+                            <li><strong>Email:</strong> <a href="mailto:sabino.th@hotmail.com">sabino.th@hotmail.com</a></li>
+                            <li><strong>Endereço:</strong> Av. Sertório, 5310 - Porto Alegre - RS</li>
                         </ul>
                         <!-- spacing for mobile viewing --><br><br>
                     </div> <!-- /.col-md-7 -->
