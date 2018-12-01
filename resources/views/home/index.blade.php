@@ -216,18 +216,11 @@ http://www.templatemo.com/tm-406-flex
                 <div class="row">
                     <div class="heading-section col-md-12 text-center">
                         <h2>Quem somos</h2>
-                        <p>Somos uma empresa de tecnologia que desenvolve sistems inteligentes para agilizar o gerencianto
-                        para empresas, condominios residenciais, condominios comerciais e empresas do ramo imobiliario
-                        como imobiliarias.</p>
+                        <p>Somos uma empresa que desenvolve sistemas inteligentes e de alta qualidade com uma
+                            equipe de desenvolvedores especializada em sistemas web e mobile. Estamos no mercado já
+                            algum tempo e somos referencia em sistemas para condomínios e comerciais..</p>
                     </div> <!-- /.heading-section -->
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                       <div class="googlemap-wrapper">
-                            <div id="map_canvas" class="map-canvas"></div>
-                        </div> <!-- /.googlemap-wrapper -->
-                    </div> <!-- /.col-md-12 -->
-                </div> <!-- /.row -->
             </div> <!-- /.container -->
         </div> <!-- /#our-team -->
 
@@ -243,19 +236,20 @@ http://www.templatemo.com/tm-406-flex
 
                 <div class="row">
                     <div class="col-md-7 col-sm-6">
-                        <p>
+                        <p style="font-size: 20px;">
                             Disponibilizamos diversas formas de nos contatar.<br />
                             Ficaremos felizes em responder a todas as suas dúvidas e atender suas necessidades.<br />
                             Consulte-nos sobre valores e pacotes de serviços.<br />
                             Faça um orçamento. <br />
 
-                    	</p>
-                        <ul style="font-size: 15px;" class="contact-info">
+                        </p>
+                        <br>
+                        <ul style="font-size: 20px;" class="contact-info">
                             <li><strong>Telefone:</strong> (51) 3251-1111 </li>
                             <li><strong>Email:</strong> <a href="mailto:sabino.th@hotmail.com">sabino.th@hotmail.com</a></li>
                             <li><strong>Endereço:</strong> Av. Sertório, 5310 - Porto Alegre - RS</li>
                         </ul>
-                        <!-- spacing for mobile viewing --><br><br>
+                        {{-- <!-- spacing for mobile viewing --><br><br> --}}
                     </div> <!-- /.col-md-7 -->
                     <div class="col-md-5 col-sm-6">
                         <div class="contact-form">
@@ -278,7 +272,13 @@ http://www.templatemo.com/tm-406-flex
                         </div> <!-- /.contact-form -->
                     </div> <!-- /.col-md-5 -->
                 </div> <!-- /.row -->
-
+                <div class="row">
+                    <div class="col-md-12">
+                       <div class="googlemap-wrapper">
+                            <div id="map_canvas" class="map-canvas"></div>
+                        </div> <!-- /.googlemap-wrapper -->
+                    </div> <!-- /.col-md-12 -->
+                </div> <!-- /.row -->
             </div> <!-- /.container -->
         </div> <!-- /#contact -->
 
