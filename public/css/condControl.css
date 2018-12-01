@@ -93,3 +93,13 @@
     border-radius: 20px;
     padding: 1px 15px 1px 15px;
 }
+
+.fa-plus {
+    background-color: rgb(41, 59, 139);
+    color: white;
+}
+
+.fa-plus:hover, .fa-plus:active, .fa-plus:focus {
+    background-color: rgb(82, 103, 194);
+    color: white;
+}
