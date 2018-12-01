@@ -515,7 +515,7 @@ a.enter-btn {
   color: #444444;
   font-size: 16px;
   font-weight: 300;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin-top: 10px;
 }
 
