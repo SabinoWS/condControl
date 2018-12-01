@@ -31,10 +31,10 @@
                                     <td class="text-center">{{ $local->getDescription() }}</td>
                                     <td class="col-xs-2 text-center">{{ $local->getCapacity() }}</td>
                                     <td class="col-xs-2 text-center">
-                                        <a href="{{ route('edit-local',  $local->getId()) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <a href="{{ route('edit-local',  $local->getId()) }}"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></a>
                                         <form class="inline form-horizontal" method="POST" action="{{ route('delete-local', ['id' => $local->getId()]) }}">
                                             {{ csrf_field() }}
-                                            <button class="link-button" type="submit"><i class="fa fa-trash"></i></button>
+                                            <button onclick="btnDelConfirm(event, form)" class="btn-del link-button" type="submit"><i class="fa fa-trash fa-2x"></i></button>
                                         </form>
                                     </td>
                                 </tr>

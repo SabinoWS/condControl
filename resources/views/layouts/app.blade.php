@@ -14,7 +14,7 @@
     <link href="{{ asset('css/condControl.css') }}" rel="stylesheet">
     <link href="{{ asset('js/data_table/dtcss.css') }}" rel="stylesheet">
     <link href="{{ asset('fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet">
-
+    
 </head>
 <body>
 
@@ -23,6 +23,9 @@
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="{{ asset('js/mask/jquery.mask.js') }}"></script>
     <script src="{{ asset('js/mask/maskUse.js') }}"></script>
+    <script src="{{ asset('js/funcoes.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
 
     <script>
         $.ajaxSetup({

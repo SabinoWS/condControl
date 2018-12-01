@@ -29,10 +29,10 @@
                                     <td class="text-center">{{ $schedule->getUser()->getName() }}</td>
                                     <td class="col-xs-2 text-center">
                                         @if ($schedule->getUser()->getId() == auth()->getUser()->getId() || auth()->getUser()->hasRole('manager'))
-                                            <a href="{{ route('edit-schedule',  $schedule->getId()) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                            <a href="{{ route('edit-schedule',  $schedule->getId()) }}"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></a>
                                             <form class="inline form-horizontal" method="POST" action="{{ route('delete-schedule', ['id' => $schedule->getId()]) }}">
                                                 {{ csrf_field() }}
-                                                <button class="link-button" type="submit"><i class="fa fa-trash"></i></button>
+                                                <button onclick="btnDelConfirm(event, form)" class="btn-del link-button" type="submit"><i class="fa fa-trash fa-2x"></i></button>
                                             </form>
                                         @endif
                                     </td>

@@ -37,7 +37,7 @@
                                         &nbsp &nbsp
                                         <form class="inline form-horizontal" method="POST" action="{{ route('delete-news', ['id' => $new->getId()]) }}">
                                             {{ csrf_field() }}
-                                            <button class="link-button" type="submit"><i class="fa fa-trash fa-2x"></i></button>
+                                            <button onclick="btnDelConfirm(event, form)" class="btn-del link-button" type="submit"><i class="fa fa-trash fa-2x"></i></button>
                                         </form>
                                     </td>
                                 </tr>
@@ -56,6 +56,8 @@
 @push('scripts')
 <script type="text/javascript">
     $( document ).ready(function() {
+        
+
         $("#tabela").dataTable({
                 "bJQueryUI": true,
                 "oLanguage": {
